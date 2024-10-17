@@ -1,3 +1,5 @@
+import Cloud from '@/app/_components/cloud';
+import Content from './_components/content';
 import { getAllBlogAbstract } from '@/utils/abstract-scan';
 
 export default function Index() {
@@ -8,5 +10,12 @@ export default function Index() {
     abstracts
   );
 
-  return <main>aaa</main>;
+  return (
+    <main>
+      {/* 顶部云层 */}
+      <Cloud />
+      {/* 内容 */}
+      <Content />
+    </main>
+  );
 }
