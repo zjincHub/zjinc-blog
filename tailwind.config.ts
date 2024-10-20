@@ -43,5 +43,8 @@ const config: Config = {
     },
   },
   plugins: [],
+  corePlugins: {
+    preflight: false, // 禁用 Tailwind 的全局基础样式
+  },
 };
 export default config;

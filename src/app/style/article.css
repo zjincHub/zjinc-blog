@@ -1,10 +1,38 @@
+/* 标题样式 */
 .article h1 {
+    @apply m-0;
     @apply text-2xl;
 }
 
+/* 段落样式 */
 .article p {
+    @apply m-0;
     @apply tracking-wide;
     @apply text-base;
     @apply leading-relaxed;
     @apply text-gray-600;
+}
+
+/* 引用段落样式 */
+.article blockquote {
+    @apply w-full;
+    @apply px-8;
+    @apply py-4;
+    @apply my-4;
+    @apply mx-0;
+    @apply rounded-lg;
+    @apply bg-slate-100;
+    @apply box-border;
+    @apply border-0;
+    @apply border-l-8;
+    @apply border-l-blue-400;
+    @apply border-solid;
+}
+
+.article blockquote h1 {
+    @apply text-base;
+    @apply font-normal;
+    @apply text-sky-800;
+    @apply text-right;
+    @apply mt-2;
 }
