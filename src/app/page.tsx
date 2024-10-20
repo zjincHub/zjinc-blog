@@ -1,5 +1,4 @@
-import Cloud from '@/app/_components/cloud';
-import Content from './_components/content';
+import PageHeaderCloud from '@/app/_components/page-header-cloud';
 import { getAllBlogAbstract } from '@/utils/abstract-scan';
 
 export default function Index() {
@@ -13,9 +12,8 @@ export default function Index() {
   return (
     <main>
       {/* 顶部云层 */}
-      <Cloud />
+      <PageHeaderCloud />
       {/* 内容 */}
-      <Content />
     </main>
   );
 }

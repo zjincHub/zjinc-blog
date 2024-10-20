@@ -1,0 +1,10 @@
+.article h1 {
+    @apply text-2xl;
+}
+
+.article p {
+    @apply tracking-wide;
+    @apply text-base;
+    @apply leading-relaxed;
+    @apply text-gray-600;
+}

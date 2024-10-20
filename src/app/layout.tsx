@@ -6,8 +6,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'zjinc blog',
-  description: 'zjinc blog',
+  title: 'ZJINC BLOG',
+  description: "zjinc's blog",
   keywords: ['blog', 'code', '博客', '编程'],
 };
 
