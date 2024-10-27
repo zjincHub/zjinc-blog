@@ -1,0 +1,35 @@
+import abstract from './abstract.json';
+import PageHeaderCloud from '@/app/_components/page-header-cloud';
+import PageHeaderTitle from '@/app/_components/page-header-title';
+import Article from '@/app/_components/article';
+import Code from '@/app/_components/code';
+
+{/* 页头云朵 */}
+
+<PageHeaderCloud />
+
+{/* 文章标题 */}
+
+<PageHeaderTitle {...abstract} />
+
+{/* 正文开始 */}
+
+<Article>
+
+# 技术栈
+
+NestJS、Taro 微信小程序、React
+
+# 我遇到的问题
+
+不知道如何在 NestJS 中使用 WebSocket 而非 Socket.IO
+
+# 解决方案
+
+<Code lang="javascript">
+const aaa = '123';
+const bbb = '234';
+
+</Code>
+
+</Article>

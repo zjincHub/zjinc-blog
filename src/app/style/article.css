@@ -1,7 +1,18 @@
+.article {
+    @apply w-full;
+    @apply bg-white;
+    @apply max-w-[800px];
+    @apply m-auto;
+    @apply px-4;
+    @apply box-border;
+}
+
 /* 标题样式 */
 .article h1 {
-    @apply m-0;
-    @apply text-2xl;
+    @apply mt-6;
+    @apply mb-2;
+    @apply text-xl;
+    @apply text-sky-800;
 }
 
 /* 段落样式 */
@@ -15,11 +26,14 @@
 
 /* 引用段落样式 */
 .article blockquote {
+    @apply mx-0;
+    @apply my-4;
+}
+
+.article blockquote p {
     @apply w-full;
     @apply px-8;
     @apply py-4;
-    @apply my-4;
-    @apply mx-0;
     @apply rounded-lg;
     @apply bg-slate-100;
     @apply box-border;
@@ -34,5 +48,6 @@
     @apply font-normal;
     @apply text-sky-800;
     @apply text-right;
-    @apply mt-2;
+    @apply pr-8;
+    @apply mt-3;
 }
