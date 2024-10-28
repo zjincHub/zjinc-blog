@@ -5,6 +5,7 @@
 
 @layer base {
     @import './style/article.css';
+    @import './style/code.css';
 
     @font-face {
         font-family: 'letao';

@@ -1,0 +1,8 @@
+.shiki {
+    @apply m-0;
+    @apply bg-transparent !important;
+}
+
+.shiki .line {
+    @apply text-base;
+}

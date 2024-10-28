@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from 'react';
 
 interface Props {
-  children: any;
   lang: string;
-  theme: string;
+  name: string;
+  theme?: string;
+  children: any;
 }
 
 // 直接用 import('shiki') 会报错，所以这里用动态 import
@@ -50,5 +51,23 @@ export default function Index(props: Props) {
     getHtmlByCode();
   }, []);
 
-  return <div dangerouslySetInnerHTML={{ __html: code }} />;
+  return (
+    <div className="code bg-gradient-to-b from-black to-gray-900 rounded-[12px]">
+      <div className="flex items-center justify-between p-4">
+        <div className="flex items-center">
+          <div className="px-1">
+            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+          </div>
+          <div className="px-1">
+            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+          </div>
+          <div className="px-1">
+            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+          </div>
+        </div>
+        <div className="text-white text-sm">index.js</div>
+      </div>
+      <div className="px-5 pb-4" dangerouslySetInnerHTML={{ __html: code }} />
+    </div>
+  );
 }
