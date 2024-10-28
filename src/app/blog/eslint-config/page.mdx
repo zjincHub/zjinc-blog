@@ -1,0 +1,35 @@
+import abstract from './abstract.json';
+import PageHeaderCloud from '@/app/_components/page-header-cloud';
+import PageHeaderTitle from '@/app/_components/page-header-title';
+import Article from '@/app/_components/article';
+import Code from '@/app/_components/code';
+
+{/* 页头云朵 */}
+
+<PageHeaderCloud />
+
+{/* 文章标题 */}
+
+<PageHeaderTitle {...abstract} />
+
+{/* 正文开始 */}
+
+<Article>
+
+<Code lang='javascript' names='.eslintrc.js'>
+```
+module.exports = {
+  root: true,
+  rules: {
+    'react/require-default-props': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
+    'max-classes-per-file': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+  },
+};
+```
+</Code>
+
+</Article>
+
+{/* 正文结束 */}

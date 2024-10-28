@@ -1,6 +1,6 @@
 import PageHeaderCloud from '@/app/_components/page-header-cloud';
+import PageFooter from '@/app/_components/page-footer';
 import { getAllBlogAbstract } from '@/utils/abstract-scan';
-import { codeToHtml } from 'shiki';
 
 export default function Index() {
   const abstracts = getAllBlogAbstract();
@@ -15,6 +15,7 @@ export default function Index() {
       {/* 顶部云层 */}
       <PageHeaderCloud />
       {/* 内容 */}
+      <PageFooter />
     </main>
   );
 }

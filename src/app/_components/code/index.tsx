@@ -19,7 +19,8 @@ const importShiki = async () => {
  * 根据props.children拼接成完整的string
  */
 const codeFormat = (props: any) => {
-  const children = props.children;
+  // 当Code组件内部嵌套```标识符的时候，会多一层props.children的嵌套
+  const children = props.children?.props?.children || props.children;
   // 如果没有children，直接返回
   if (!children) return '';
   // 如果children是数组，就用reduce拼接成完整的string
@@ -44,6 +45,11 @@ const codeFormat = (props: any) => {
  * 切割html
  */
 const cutHtml = (html: string) => {
+  console.log(
+    '%c [ html ]-47',
+    'font-size:13px; background:#0029b7; color:#446dfb;',
+    html
+  );
   // 提取html的头、尾、内容
   const headRegex = /<pre\b[^>]*><code>/i;
   const contentRegex = /<pre[^>]*><code>([\s\S]*?)<\/code><\/pre>/;
@@ -86,7 +92,7 @@ export default function Index(props: Props) {
   }, []);
 
   return (
-    <div className="code bg-gradient-to-b from-black to-gray-900 rounded-[12px]">
+    <div className="code bg-gradient-to-b from-black to-gray-900 rounded-[8px]">
       <div className="flex items-center justify-between p-4">
         <div className="flex items-center">
           <div className="px-1">
