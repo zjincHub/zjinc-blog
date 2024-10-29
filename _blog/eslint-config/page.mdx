@@ -16,6 +16,19 @@ import Code from '@/app/_components/code';
 
 <Article>
 
+<Code lang='javascript' names='.eslintrc.js'>
+```
+module.exports = {
+  root: true,
+  rules: {
+    'react/require-default-props': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
+    'max-classes-per-file': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+  },
+};
+```
+
 <Code lang='javascript' names='prettier.config.js'>
 ```
 /* eslint-disable max-len */
@@ -56,6 +69,8 @@ module.exports = {
   endOfLine: 'auto',
 };
 ```
+</Code>
+
 </Code>
 
 </Article>

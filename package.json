@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "start:server": "yarn install && next build && PORT=8000 next start"
   },
   "dependencies": {
     "@next/mdx": "latest",
