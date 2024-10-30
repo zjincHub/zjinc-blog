@@ -1,10 +1,13 @@
-import type { MDXComponents } from "mdx/types";
+import type { MDXComponents } from 'mdx/types';
+import H1 from './_mdx-components/h1';
+import P from './_mdx-components/p';
+import Blockquote from './_mdx-components/blockquote';
 
-// This file is required to use MDX in `app` directory.
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
-    // Allows customizing built-in components, e.g. to add styling.
-    // h1: ({ children }) => <h1 style={{ fontSize: "100px" }}>{children}</h1>,
     ...components,
+    h1: H1,
+    p: P,
+    blockquote: Blockquote,
   };
 }
