@@ -1,22 +1,12 @@
-import abstract from './abstract.json';
-import PageHeaderCloud from '@/app/_components/page-header-cloud';
-import PageHeaderTitle from '@/app/_components/page-header-title';
-import Article from '@/app/_components/article';
-import Code from '@/app/_components/code';
-
-{/* 页头云朵 */}
-
-<PageHeaderCloud />
-
-{/* 文章标题 */}
-
-<PageHeaderTitle {...abstract} />
+import Article from '/_components/article';
+import Code from '/_components/code';
 
 {/* 正文开始 */}
 
 <Article>
 
 <Code lang='javascript' names='.eslintrc.js'>
+
 ```
 module.exports = {
   root: true,
@@ -29,7 +19,10 @@ module.exports = {
 };
 ```
 
+</Code>
+
 <Code lang='javascript' names='prettier.config.js'>
+
 ```
 /* eslint-disable max-len */
 // 规范项目代码书写
@@ -69,7 +62,6 @@ module.exports = {
   endOfLine: 'auto',
 };
 ```
-</Code>
 
 </Code>
 

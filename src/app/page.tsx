@@ -1,5 +1,5 @@
-import PageHeaderCloud from '@/app/_components/page-header-cloud';
-import PageFooter from '@/app/_components/page-footer';
+import PageHeaderCloud from './components/page-header-cloud';
+import PageFooter from './components/page-footer';
 
 export default function Index() {
   return (
