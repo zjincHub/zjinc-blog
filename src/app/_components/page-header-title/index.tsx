@@ -1,6 +1,6 @@
 export default function Index(props: IProps) {
   return (
-    <div className="relative max-w-[800px] m-auto mt-[-100px] z-20 px-4 box-border">
+    <div className="relative max-w-[800px] m-auto z-20 px-4 box-border">
       <h1 className="text-sky-800 font-medium font-letao text-6xl">
         {props.title}
       </h1>

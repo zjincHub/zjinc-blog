@@ -15,7 +15,7 @@ export default function Index(props: IProps) {
     <>
       <PageHeaderCloud />
       <PageHeaderTitle {...abstract} />
-      <div className="w-full bg-white max-w-[800px] m-auto px-4 box-border">
+      <div className="w-full max-w-[800px] bg-transparent relative z-50 m-auto px-4 box-border">
         <BlogComponent />
       </div>
     </>
