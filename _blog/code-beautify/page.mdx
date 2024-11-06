@@ -1,12 +1,9 @@
-import Code from '/_components/code';
-
 # Eslint 配置
 
-<Code lang='javascript' names='.eslintrc.js'>
-
-```
+```javascript
 module.exports = {
   root: true,
+  extends: [require.resolve('@cfe/eslint-config-ytian')],
   rules: {
     'react/require-default-props': 'off',
     '@typescript-eslint/no-empty-function': 'off',
@@ -16,11 +13,9 @@ module.exports = {
 };
 ```
 
-</Code>
+# Prettier 配置
 
-<Code lang='javascript' names='prettier.config.js'>
-
-```
+```javascript
 /* eslint-disable max-len */
 // 规范项目代码书写
 module.exports = {
@@ -58,10 +53,4 @@ module.exports = {
   // For historical reasons, there exist two commonly used flavors of line endings in text files. That is \n (or LF for Line Feed) and \r\n (or CRLF for Carriage Return + Line Feed).
   endOfLine: 'auto',
 };
-```
-
-</Code>
-
-```ts
-const a = 1;
 ```

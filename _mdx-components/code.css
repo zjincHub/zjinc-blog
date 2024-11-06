@@ -1,0 +1,7 @@
+.mdx-code .shiki {
+    @apply m-0;
+}
+
+.mdx-code .line {
+    @apply leading-5;
+}

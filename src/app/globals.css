@@ -2,10 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    @import './style/code.css';
-
     @font-face {
         font-family: 'letao';
         src: url('/font/letao.ttf') format('truetype');

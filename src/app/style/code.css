@@ -1,9 +1,0 @@
-.shiki {
-    @apply m-0;
-    @apply bg-transparent !important;
-    @apply overflow-x-scroll
-}
-
-.shiki .line {
-    @apply text-sm;
-}
