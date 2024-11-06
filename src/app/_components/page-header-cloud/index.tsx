@@ -122,7 +122,7 @@ const Sky3 = () => {
 };
 export default function Index() {
   return (
-    <div className="w-full h-[500px] relative overflow-hidden">
+    <div className="w-full h-[400px] relative overflow-hidden">
       {/* 3层天空+透明度来给云层分层 */}
       <Sky1 />
       <Sky2 />

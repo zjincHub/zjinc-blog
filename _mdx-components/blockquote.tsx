@@ -3,7 +3,7 @@ import P from './p';
 
 const renderH1 = (string: string) => {
   return (
-    <P className={'text-base font-normal text-sky-800 text-right pr-8 mt-3'}>
+    <P className={'text-base font-normal text-sky-800 text-right pr-6 mt-3'}>
       {string}
     </P>
   );
@@ -11,13 +11,13 @@ const renderH1 = (string: string) => {
 
 const renderP = (string: string) => {
   return (
-    <P className="w-full px-8 py-4 rounded-lg bg-slate-100 box-border border-0 border-l-8 border-l-blue-400 border-solid">
+    <P className="w-full px-6 py-4 rounded-lg bg-slate-100 box-border border-0 border-l-8 border-l-blue-400 border-solid">
       {string}
     </P>
   );
 };
 
-export default function Index(props: { children?: any }): any {
+export default function Blockquote(props: { children?: any }): JSX.Element {
   const children: any = [];
   props.children.forEach((child: any) => {
     if (child.type === H1) {

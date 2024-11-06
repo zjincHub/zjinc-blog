@@ -5,14 +5,14 @@ export type Piece = {
   color: 'black' | 'white';
 } | null;
 
-interface ChessBoardProps {
+interface IChessBoardProps {
   board: (Piece | null)[][];
   onCellClick: (row: number, col: number) => void;
 }
 
 const COLUMNS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
-export default function ChessBoard({ board, onCellClick }: ChessBoardProps) {
+export default function ChessBoard({ board, onCellClick }: IChessBoardProps) {
   return (
     <div className="relative bg-amber-200 p-8 rounded-xl shadow-xl">
       {/* Column labels (A-H) - Top */}

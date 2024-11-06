@@ -1,10 +1,10 @@
 import CodeBeautify from './code-beautify/page.mdx';
-import CodeBeautifyAbs from '../_blog/code-beautify/abstract.json';
+import CodeBeautifyAbs from '../_blog/code-beautify/abstract';
 import DesignPattern from './design-pattern/page.mdx';
-import DesignPatternAbs from './design-pattern/abstract.json';
-import { BlogComponent } from './type';
+import DesignPatternAbs from './design-pattern/abstract';
+import { IBlogComponent } from './type';
 
-const blogComponents = [
+const blogComponents: IBlogComponent[] = [
   {
     ...CodeBeautifyAbs,
     component: CodeBeautify,

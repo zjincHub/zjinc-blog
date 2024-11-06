@@ -8,6 +8,6 @@ export interface IBlogAbstract {
   updateDate: string;
 }
 
-export interface BlogComponent extends IBlogAbstract {
+export interface IBlogComponent extends IBlogAbstract {
   component: any;
 }

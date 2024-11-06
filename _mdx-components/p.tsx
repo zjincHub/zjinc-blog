@@ -1,4 +1,7 @@
-export default function P(props: { children?: any; className?: string }): any {
+export default function P(props: {
+  children?: any;
+  className?: string;
+}): JSX.Element {
   return (
     <p
       className={

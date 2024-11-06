@@ -1,12 +1,12 @@
 import { notFound } from 'next/navigation';
-import blogComponents from '../../../../_blog';
-import PageHeaderCloud from '@/app/components/page-header-cloud';
-import PageHeaderTitle from '@/app/components/page-header-title';
+import blogComponents from '@blog';
+import PageHeaderCloud from '@/app/_components/page-header-cloud';
+import PageHeaderTitle from '@/app/_components/page-header-title';
 
 /**
  * 博客页面
  */
-export default function Index(props: Props) {
+export default function Index(props: IProps) {
   const blogName = props.params.blog;
   const blog = blogComponents.find((blog) => blog.path === blogName);
   if (!blog) notFound();
@@ -22,7 +22,7 @@ export default function Index(props: Props) {
   );
 }
 
-interface Props {
+interface IProps {
   params: {
     blog: string;
   };

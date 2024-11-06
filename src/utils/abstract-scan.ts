@@ -1,25 +1,25 @@
-import fs from 'fs';
-import { join } from 'path';
-import { BlogAbstract } from '@/interfaces/blog';
-import 
+// import fs from 'fs';
+// import { join } from 'path';
+// import { BlogAbstract } from '@/interfaces/blog';
+// import
 
-const postsDirectory = join(process.cwd(), '_blog');
+// const postsDirectory = join(process.cwd(), '_blog');
 
-export function getBlogPaths() {
-  return fs.readdirSync(postsDirectory);
-}
+// export function getBlogPaths() {
+//   return fs.readdirSync(postsDirectory);
+// }
 
-export function getBlogAbstract(path: string) {
-  try {
-    const realPath = path.replace(/\.mdx$/, '');
-    const fullPath = join(postsDirectory, `${realPath}/abstract.json`);
-    const jsonContents = fs.readFileSync(fullPath, 'utf8');
-    const abstract: BlogAbstract = require(jsonContents);
-    return abstract;
-  } catch (e: unknown) {
-    return null;
-  }
-}
+// export function getBlogAbstract(path: string) {
+//   try {
+//     const realPath = path.replace(/\.mdx$/, '');
+//     const fullPath = join(postsDirectory, `${realPath}/abstract.json`);
+//     const jsonContents = fs.readFileSync(fullPath, 'utf8');
+//     const abstract: BlogAbstract = require(jsonContents);
+//     return abstract;
+//   } catch (e: unknown) {
+//     return null;
+//   }
+// }
 
 // export function getAllBlogAbstract() {
 //   const paths = getBlogPaths();

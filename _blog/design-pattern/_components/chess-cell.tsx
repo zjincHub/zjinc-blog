@@ -5,7 +5,7 @@ export type Piece = {
   color: 'black' | 'white';
 } | null;
 
-interface ChessCellProps {
+interface IChessCellProps {
   piece: Piece | null;
   isLight: boolean;
   onClick: () => void;
@@ -17,7 +17,7 @@ export default function ChessCell({
   isLight,
   onClick,
   coordinate,
-}: ChessCellProps) {
+}: IChessCellProps) {
   return (
     <button
       onClick={onClick}

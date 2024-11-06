@@ -1,13 +1,9 @@
-interface Props {
-  title: string;
-  author: string;
-  createDate: string;
-  updateDate: string;
-}
-export default function Index(props: Props) {
+export default function Index(props: IProps) {
   return (
     <div className="relative max-w-[800px] m-auto mt-[-100px] z-20 px-4 box-border">
-      <h1 className="text-sky-800 font-medium font-letao ">{props.title}</h1>
+      <h1 className="text-sky-800 font-medium font-letao text-6xl">
+        {props.title}
+      </h1>
       <div className="mt-4 mb-10 text-sm">
         <span>{`作者：${props.author}`}</span>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -17,4 +13,11 @@ export default function Index(props: Props) {
       </div>
     </div>
   );
+}
+
+interface IProps {
+  title: string;
+  author: string;
+  createDate: string;
+  updateDate: string;
 }
