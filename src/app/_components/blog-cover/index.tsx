@@ -5,7 +5,7 @@ import ButtonTag from '../button-tag';
 export default function Index(props: IProps) {
   return (
     <div className="blog-cover w-full max-w-[800px] bg-transparent m-auto">
-      <span className="text-2xl font-bold cursor-pointer tracking-wider">
+      <span className="inline-block mb-1 text-2xl font-bold cursor-pointer tracking-wider">
         <Link href={props.path}>{props.title}</Link>
       </span>
       <div>

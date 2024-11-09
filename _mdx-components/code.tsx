@@ -42,5 +42,5 @@ export default (props: IProps) => {
 
 interface IProps {
   className?: string;
-  children?: string;
+  children?: any;
 }
