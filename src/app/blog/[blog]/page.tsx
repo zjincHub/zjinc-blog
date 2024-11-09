@@ -8,7 +8,9 @@ import PageHeaderTitle from '@/app/_components/page-header-title';
  */
 export default function Index(props: IProps) {
   const blogName = props.params.blog;
-  const blog = blogComponents.find((blog) => blog.path === blogName);
+  const blog = blogComponents.find(
+    (blog) => blog.path.split('/').pop() === blogName
+  );
   if (!blog) notFound();
   const { component: BlogComponent, ...abstract } = blog;
   return (

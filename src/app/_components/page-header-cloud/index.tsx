@@ -1,3 +1,30 @@
+export default function Index() {
+  return (
+    <div className="h-[600px] overflow-hidden mb-[-172px]">
+      <div className="w-full h-[400px] relative overflow-visible -z-50">
+        {/* 3层天空+透明度来给云层分层 */}
+        <Sky1 />
+        <Sky2 />
+        <Sky3 />
+        {/* 第1层云层 */}
+        <Cloud1 />
+        <Cloud2 />
+        <Cloud3 />
+        {/* 第2层云层 */}
+        <Cloud4 />
+        <Cloud5 />
+        <Cloud6 />
+        <Cloud7 />
+        {/* 第3层云层 */}
+        <Cloud8 />
+        <Cloud9 />
+        <Cloud10 />
+        <Cloud11 />
+      </div>
+    </div>
+  );
+}
+
 const Cloud1 = () => {
   return (
     <div className="absolute left-[50%] translate-x-[-800px] top-[300px] z-[10]">
@@ -120,27 +147,3 @@ const Sky3 = () => {
     <div className="absolute w-full h-[500px] opacity-[0.6] z-[5] bg-gradient-to-b from-sky-300 to-white" />
   );
 };
-export default function Index() {
-  return (
-    <div className="w-full h-[400px] relative overflow-visible -z-50">
-      {/* 3层天空+透明度来给云层分层 */}
-      <Sky1 />
-      <Sky2 />
-      <Sky3 />
-      {/* 第1层云层 */}
-      <Cloud1 />
-      <Cloud2 />
-      <Cloud3 />
-      {/* 第2层云层 */}
-      <Cloud4 />
-      <Cloud5 />
-      <Cloud6 />
-      <Cloud7 />
-      {/* 第3层云层 */}
-      <Cloud8 />
-      <Cloud9 />
-      <Cloud10 />
-      <Cloud11 />
-    </div>
-  );
-}

@@ -1,7 +1,7 @@
 import CodeBeautify from './code-beautify/page.mdx';
-import CodeBeautifyAbs from '../_blog/code-beautify/abstract';
+import CodeBeautifyAbs from '../_blog/code-beautify/info';
 import DesignPattern from './design-pattern/page.mdx';
-import DesignPatternAbs from './design-pattern/abstract';
+import DesignPatternAbs from './design-pattern/info';
 import { IBlogComponent } from './type';
 
 const blogComponents: IBlogComponent[] = [

@@ -1,5 +1,4 @@
 import { use } from 'react';
-import './code.css';
 
 const DEFAULT_LANG = 'javascript';
 const DEFAULT_THEME = 'everforest-dark';

@@ -1,11 +1,29 @@
+import Link from 'next/link';
+import ButtonReadMore from '../button-read-more';
+import ButtonTag from '../button-tag';
+
 export default function Index(props: IProps) {
   return (
-    <div className="flex justify-center items-center h-[60px] bg-sky-800">
-      <span className="text-white text-lg">{props.title}</span>
+    <div className="blog-cover w-full max-w-[800px] bg-transparent m-auto">
+      <span className="text-2xl font-bold cursor-pointer tracking-wider">
+        <Link href={props.path}>{props.title}</Link>
+      </span>
+      <div>
+        {props.tags.map((tag, index) => (
+          <ButtonTag key={index}>{tag}</ButtonTag>
+        ))}
+      </div>
+      <div className="mt-4 text-gray-700 text-base tracking-wider">
+        {props.summary}
+      </div>
+      <ButtonReadMore path={props.path} />
     </div>
   );
 }
 
 interface IProps {
   title: string;
+  summary: string;
+  tags: string[];
+  path: string;
 }

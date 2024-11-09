@@ -1,0 +1,16 @@
+.button-tag {
+    margin: 10px 10px 0 0;
+    padding: 6px 8px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #0369a1;
+    font-size: 12px;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+
+.button-tag:hover {
+    background-color: #0284c7;
+    box-shadow: 0 0 20px #6fc5ff50;
+    transform: scale(1.1);
+}
