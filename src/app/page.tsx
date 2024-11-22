@@ -3,6 +3,13 @@ import PageHeaderCloud from './_components/page-header-cloud';
 import PageFooter from './_components/page-footer';
 import BlogCover from './_components/blog-cover';
 import ButtonTag from './_components/button-tag';
+import { chineseDateToDate } from '@/utils/time';
+
+const sortBlogs = blogs.sort((a, b) => {
+  const dateA = chineseDateToDate(a.createDate);
+  const dateB = chineseDateToDate(b.createDate);
+  return dateB.getTime() - dateA.getTime();
+});
 
 export default function Index() {
   return (
@@ -12,7 +19,7 @@ export default function Index() {
       {/* 首页内容 */}
       <div className="w-full max-w-[1000px] bg-transparent m-auto flex">
         <div className="w-full max-w-[700px] pr-12">
-          {blogs.map((item) => (
+          {sortBlogs.map((item) => (
             <BlogCover
               key={item.path}
               title={item.title}
