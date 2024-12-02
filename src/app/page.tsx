@@ -17,8 +17,8 @@ export default function Index() {
       {/* 顶部云层 */}
       <PageHeaderCloud />
       {/* 首页内容 */}
-      <div className="relative z-0 w-full max-w-[1000px] bg-transparent m-auto flex">
-        <div className="w-full max-w-[700px] pr-12">
+      <div className="relative z-0 w-full max-w-[1100px] bg-transparent m-auto flex">
+        <div className="w-full max-w-[800px] px-12">
           {sortBlogs.map((item) => (
             <BlogCover
               key={item.path}
@@ -29,7 +29,7 @@ export default function Index() {
             />
           ))}
         </div>
-        <div className="w-full max-w-[300px] translate-y-24">
+        <div className="w-full max-w-[300px] px-10 translate-y-24">
           <div>分类查询</div>
           <ButtonTag>JavaScript</ButtonTag>
           <ButtonTag>TypeScript</ButtonTag>
