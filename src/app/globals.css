@@ -2,7 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --color-background-main: #F7FBFC;
+    --color-sky-main: #F7FBFC;
+    --color-cloud-amin: #D6E6F2;
+    --color-cloud-secondary: #B9D7EA;
+}
+
 @layer base {
+
+
     @font-face {
         font-family: 'letao';
         src: url('/font/letao.ttf') format('truetype');
@@ -11,6 +20,7 @@
     body {
         margin: 0;
         padding: 0;
+        background-color: var(--color-background-main);
     }
 
     a {

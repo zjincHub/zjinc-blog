@@ -13,11 +13,11 @@ const sortBlogs = blogs.sort((a, b) => {
 
 export default function Index() {
   return (
-    <main>
+    <main className="bg-[var(--color-background-main)]">
       {/* 顶部云层 */}
       <PageHeaderCloud />
       {/* 首页内容 */}
-      <div className="w-full max-w-[1000px] bg-transparent m-auto flex">
+      <div className="relative z-0 w-full max-w-[1000px] bg-transparent m-auto flex">
         <div className="w-full max-w-[700px] pr-12">
           {sortBlogs.map((item) => (
             <BlogCover

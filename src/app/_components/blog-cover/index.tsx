@@ -1,19 +1,20 @@
 import Link from 'next/link';
 import ButtonReadMore from '../button-read-more';
-import ButtonTag from '../button-tag';
 
 export default function Index(props: IProps) {
   return (
     <div className="blog-cover w-full max-w-[800px] bg-transparent m-auto">
-      <span className="inline-block mb-1 text-2xl font-bold cursor-pointer tracking-wider">
-        <Link href={props.path}>{props.title}</Link>
+      <span className="inline-block text-2xl font-bold cursor-pointer tracking-wider">
+        <Link className="text-[#1E201E] " href={props.path}>
+          {props.title}
+        </Link>
       </span>
-      <div>
+      <div className="mt-2">
         {props.tags.map((tag, index) => (
-          <ButtonTag key={index}>{tag}</ButtonTag>
+          <span key={index}>{tag}</span>
         ))}
       </div>
-      <div className="mt-4 text-gray-700 text-base tracking-wider">
+      <div className="mt-2 text-gray-700 text-base tracking-wider">
         {props.summary}
       </div>
       <ButtonReadMore path={props.path} />
