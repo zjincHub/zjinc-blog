@@ -6,7 +6,7 @@ export default function Index(props: IProps) {
   return (
     <div className="blog-cover w-full max-w-[800px] bg-transparent m-auto">
       <span className="inline-block text-2xl font-bold cursor-pointer tracking-wider">
-        <Link className="text-gray-600" href={props.path}>
+        <Link className="text-gray-700" href={props.path}>
           {props.title}
         </Link>
       </span>

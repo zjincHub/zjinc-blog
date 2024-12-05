@@ -5,21 +5,35 @@ import BlogCover from './_components/blog-cover';
 import ButtonTag from './_components/button-tag';
 import { chineseDateToDate } from '@/utils/time';
 
+// 排序后的博客列表
 const sortBlogs = blogs.sort((a, b) => {
   const dateA = chineseDateToDate(a.createDate);
   const dateB = chineseDateToDate(b.createDate);
   return dateB.getTime() - dateA.getTime();
 });
 
-export default function Index() {
+// 所有标签
+const tagsTotal = sortBlogs.flatMap((item) => item.tags);
+
+export default function Index(props: { searchParams: { tags: string } }) {
+  const tagsStr = props.searchParams.tags;
+  const tagList = tagsStr?.split(',') || [];
+  const isNoFilter = tagList.length === 0;
+
+  const filterBlogs = sortBlogs.filter((item) => {
+    const isIncludeTag = item.tags.some((tag) => tagList.includes(tag));
+    return isNoFilter || isIncludeTag;
+  });
+
   return (
     <main className="bg-[var(--color-background-main)]">
       {/* 顶部云层 */}
       <PageHeaderCloud />
       {/* 首页内容 */}
       <div className="relative z-0 w-full max-w-[1100px] bg-transparent m-auto flex">
+        {/* 博客列表 */}
         <div className="w-full max-w-[800px] px-12">
-          {sortBlogs.map((item) => (
+          {filterBlogs.map((item) => (
             <BlogCover
               key={item.path}
               title={item.title}
@@ -29,13 +43,12 @@ export default function Index() {
             />
           ))}
         </div>
+        {/* 博客标签 */}
         <div className="w-full max-w-[300px] px-10 translate-y-24">
-          <div>分类查询</div>
-          <ButtonTag>JavaScript</ButtonTag>
-          <ButtonTag>TypeScript</ButtonTag>
-          <ButtonTag>Eslint</ButtonTag>
-          <ButtonTag>Prettier</ButtonTag>
-          <ButtonTag>设计模式</ButtonTag>
+          <div className="text-base font-bold text-gray-700">分类标签</div>
+          {tagsTotal.map((tag, index) => (
+            <ButtonTag key={index} value={tag} activityTags={tagList} />
+          ))}
         </div>
       </div>
       {/* 页脚 */}
