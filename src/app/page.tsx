@@ -30,9 +30,9 @@ export default function Index(props: { searchParams: { tags: string } }) {
       {/* 顶部云层 */}
       <PageHeaderCloud />
       {/* 首页内容 */}
-      <div className="relative z-0 w-full max-w-[1100px] bg-transparent m-auto flex">
+      <div className="relative z-0 w-full max-w-[1180px] bg-transparent m-auto flex">
         {/* 博客列表 */}
-        <div className="w-full max-w-[800px] px-12">
+        <div className="w-full max-w-[880px] px-12">
           {filterBlogs.map((item) => (
             <BlogCover
               key={item.path}

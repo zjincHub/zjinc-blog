@@ -3,44 +3,43 @@
 @tailwind utilities;
 
 :root {
-    --color-background-main: #F7FBFC;
-    --color-sky-main: #F7FBFC;
-    --color-cloud-amin: #D6E6F2;
-    --color-cloud-secondary: #B9D7EA;
+  --color-background-main: #f7fbfc;
+  --color-sky-main: #f7fbfc;
+  --color-cloud-amin: #d6e6f2;
+  --color-cloud-secondary: #b9d7ea;
 }
 
 @layer base {
+  @font-face {
+    font-family: 'letao';
+    src: url('/font/letao.ttf') format('truetype');
+  }
 
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background-main);
+  }
 
-    @font-face {
-        font-family: 'letao';
-        src: url('/font/letao.ttf') format('truetype');
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: var(--color-background-main);
-    }
-
-    a {
-        text-decoration: none;
-        color: #000;
-    }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
 }
 
 @layer utilities {
-    @import './_components/blog-cover/index.css';
-    @import './_components/button-read-more/index.css';
-    @import './_components/button-tag/index.css';
+  @import './_components/blog-cover/index.css';
+  @import './_components/button-read-more/index.css';
+  @import './_components/button-tag/index.css';
+  @import './_components/blog-directory/index.css';
 
-    .mdx-code .shiki {
-        margin: 0px;
-        overflow-x: scroll;
-        background-color: transparent !important;
-    }
+  .mdx-code .shiki {
+    margin: 0px;
+    overflow-x: scroll;
+    background-color: transparent !important;
+  }
 
-    .mdx-code .line {
-        line-height: 1.25rem;
-    }
+  .mdx-code .line {
+    line-height: 1.25rem;
+  }
 }
