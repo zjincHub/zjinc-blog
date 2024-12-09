@@ -32,6 +32,8 @@
   @import './_components/button-read-more/index.css';
   @import './_components/button-tag/index.css';
   @import './_components/blog-directory/index.css';
+  @import './_components/setting-blog/index.css';
+  @import './_components/setting-switch/index.css';
 
   .mdx-code .shiki {
     margin: 0px;
@@ -40,6 +42,7 @@
   }
 
   .mdx-code .line {
-    line-height: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
   }
 }

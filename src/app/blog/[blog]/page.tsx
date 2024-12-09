@@ -3,6 +3,7 @@ import blogComponents from '@blog';
 import PageHeaderCloud from '@/app/_components/page-header-cloud';
 import PageHeaderTitle from '@/app/_components/page-header-title';
 import BlogDirectory from '@/app/_components/blog-directory';
+import SettingBlog from '@/app/_components/setting-blog';
 
 /**
  * 博客页面
@@ -26,6 +27,7 @@ export default function Index(props: IProps) {
           <BlogDirectory mdxContent={BlogComponent} />
         </div>
       </div>
+      <SettingBlog />
     </>
   );
 }

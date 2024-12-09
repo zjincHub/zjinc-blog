@@ -1,0 +1,67 @@
+.setting-switch {
+  background-color: #495057;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.setting-switch input[type='checkbox'] {
+  display: none;
+  visibility: hidden;
+}
+
+.setting-switch .bar {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  cursor: pointer;
+}
+
+.setting-switch .bar span {
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: #f1faee;
+  border-radius: 100px;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.setting-switch .bar span.top {
+  left: 11px;
+  top: 13px;
+}
+
+.setting-switch .bar span.middle {
+  left: 11px;
+  top: 19px;
+}
+
+.setting-switch .bar span.bottom {
+  left: 11px;
+  top: 25px;
+}
+
+.setting-switch input[type]:checked ~ span.top {
+  top: 11.5px;
+  left: 13px;
+  width: 22px;
+  transform: rotate(45deg);
+  transform-origin: top left;
+}
+
+.setting-switch input[type]:checked ~ span.bottom {
+  top: 27px;
+  left: 11.5px;
+  width: 22px;
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  box-shadow: 0 0 10px #495057;
+}
+
+.setting-switch input[type]:checked ~ span.middle {
+  transform: translateX(-10px);
+  opacity: 0;
+}
