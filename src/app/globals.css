@@ -3,10 +3,30 @@
 @tailwind utilities;
 
 :root {
+  /* 页面主体背景色 */
   --color-background-main: #f7fbfc;
+  /* 页面头部天空颜色 */
   --color-sky-main: #f7fbfc;
-  --color-cloud-amin: #d6e6f2;
-  --color-cloud-secondary: #b9d7ea;
+  /* 页面头部第一层云层颜色 */
+  --color-cloud-amin: #b9d7ea;
+  /* 页面头部第二层云层颜色 */
+  --color-cloud-secondary: #d6e6f2;
+
+  /* 设置按钮背景色 */
+  --color-bg-setting-btn: #f7fbfc;
+  /* 设置按钮文字颜色 */
+  --color-setting-btn: #495057;
+}
+
+[data-theme='dark'] {
+  /* 页面主体背景色 */
+  --color-background-main: #000000;
+  /* 页面头部天空颜色 */
+  --color-sky-main: #f7fbfc;
+  /* 页面头部第一层云层颜色 */
+  --color-cloud-amin: #b9d7ea;
+  /* 页面头部第二层云层颜色 */
+  --color-cloud-secondary: #d6e6f2;
 }
 
 @layer base {
@@ -34,6 +54,8 @@
   @import './_components/blog-directory/index.css';
   @import './_components/setting-blog/index.css';
   @import './_components/setting-switch/index.css';
+  @import './_components/setting-theme/index.css';
+  @import './_components/setting-voice/index.css';
 
   .mdx-code .shiki {
     margin: 0px;

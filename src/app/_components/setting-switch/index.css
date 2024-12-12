@@ -1,8 +1,10 @@
 .setting-switch {
-  background-color: #495057;
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  background-color: var(--color-bg-setting-btn);
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
 }
 
 .setting-switch input[type='checkbox'] {
@@ -23,7 +25,7 @@
   left: 0;
   width: 18px;
   height: 2px;
-  background: #f1faee;
+  background: var(--color-setting-btn);
   border-radius: 100px;
   display: inline-block;
   transition: 0.3s ease;
@@ -58,7 +60,7 @@
   width: 22px;
   transform: rotate(-45deg);
   transform-origin: top left;
-  box-shadow: 0 0 10px #495057;
+  box-shadow: 0 0 10px var(--color-setting-btn);
 }
 
 .setting-switch input[type]:checked ~ span.middle {

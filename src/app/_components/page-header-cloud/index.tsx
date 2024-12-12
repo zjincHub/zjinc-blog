@@ -52,8 +52,8 @@ const Cloud3 = () => {
 const Cloud4 = () => {
   return (
     <div className="absolute left-[50%] translate-x-[250px] top-[200px] z-[8]">
-      <div className="absolute w-[500px] h-[600px] top-[-40px] bg-[var(--color-cloud-secondary)] rounded-[50%] -rotate-[30deg]" />
-      <div className="absolute w-[600px] h-[400px] left-[-300px] top-[50px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
+      <div className="absolute w-[500px] h-[600px] top-[-40px] bg-[var(--color-cloud-amin)] rounded-[50%] -rotate-[30deg]" />
+      <div className="absolute w-[600px] h-[400px] left-[-300px] top-[50px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
     </div>
   );
 };
@@ -61,38 +61,38 @@ const Cloud4 = () => {
 const Cloud5 = () => {
   return (
     <div className="absolute left-[50%] translate-x-[-2000px] top-[300px] z-[8]">
-      <div className="absolute w-[800px] h-[500px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
-      <div className="absolute w-[600px] h-[600px] left-[100px] top-[100px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
-      <div className="absolute w-[600px] h-[400px] left-[500px] top-[-50px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
-      <div className="absolute w-[700px] h-[500px] left-[330px] top-[150px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
-      <div className="absolute w-[800px] h-[500px] left-[600px] top-[100px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
+      <div className="absolute w-[800px] h-[500px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
+      <div className="absolute w-[600px] h-[600px] left-[100px] top-[100px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
+      <div className="absolute w-[600px] h-[400px] left-[500px] top-[-50px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
+      <div className="absolute w-[700px] h-[500px] left-[330px] top-[150px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
+      <div className="absolute w-[800px] h-[500px] left-[600px] top-[100px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
     </div>
   );
 };
 const Cloud6 = () => {
   return (
     <div className="absolute left-[50%] translate-x-[650px] top-[300px] z-[8]">
-      <div className="absolute w-[800px] h-[500px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
-      <div className="absolute w-[600px] h-[600px] left-[100px] top-[100px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
-      <div className="absolute w-[600px] h-[400px] left-[500px] top-[-50px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
-      <div className="absolute w-[700px] h-[500px] left-[330px] top-[150px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
-      <div className="absolute w-[800px] h-[500px] left-[600px] top-[100px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
+      <div className="absolute w-[800px] h-[500px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
+      <div className="absolute w-[600px] h-[600px] left-[100px] top-[100px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
+      <div className="absolute w-[600px] h-[400px] left-[500px] top-[-50px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
+      <div className="absolute w-[700px] h-[500px] left-[330px] top-[150px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
+      <div className="absolute w-[800px] h-[500px] left-[600px] top-[100px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
     </div>
   );
 };
 const Cloud7 = () => {
   return (
     <div className="absolute left-[50%] translate-x-[-400px] top-[180px] z-[8]">
-      <div className="absolute w-[500px] h-[600px] top-[-40px] bg-[var(--color-cloud-secondary)] rounded-[50%] -rotate-[30deg]" />
-      <div className="absolute w-[600px] h-[400px] left-[-300px] top-[50px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
+      <div className="absolute w-[500px] h-[600px] top-[-40px] bg-[var(--color-cloud-amin)] rounded-[50%] -rotate-[30deg]" />
+      <div className="absolute w-[600px] h-[400px] left-[-300px] top-[50px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
     </div>
   );
 };
 const Cloud8 = () => {
   return (
     <div className="absolute left-[50%] translate-x-[-200px] top-[120px] z-[6]">
-      <div className="absolute w-[500px] h-[600px] top-[-40px] bg-[var(--color-cloud-amin)] rounded-[50%] -rotate-[30deg]" />
-      <div className="absolute w-[400px] h-[300px] left-[200px] top-[-80px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
+      <div className="absolute w-[500px] h-[600px] top-[-40px] bg-[var(--color-cloud-secondary)] rounded-[50%] -rotate-[30deg]" />
+      <div className="absolute w-[400px] h-[300px] left-[200px] top-[-80px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
     </div>
   );
 };
@@ -100,27 +100,26 @@ const Cloud8 = () => {
 const Cloud9 = () => {
   return (
     <div className="absolute left-[50%] translate-x-[-1400px] top-[200px] z-[6]">
-      <div className="absolute w-[800px] h-[600px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
-      <div className="absolute w-[500px] h-[400px] left-[-20px] top-[-80px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
-      <div className="absolute w-[400px] h-[400px] left-[-200px] top-[00px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
-      <div className="absolute w-[400px] h-[400px] left-[500px] top-[100px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
+      <div className="absolute w-[800px] h-[600px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
+      <div className="absolute w-[500px] h-[400px] left-[-20px] top-[-80px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
+      <div className="absolute w-[400px] h-[400px] left-[-200px] top-[00px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
+      <div className="absolute w-[400px] h-[400px] left-[500px] top-[100px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
     </div>
   );
 };
-
 const Cloud10 = () => {
   return (
     <div className="absolute left-[50%] translate-x-[-740px] top-[160px] z-[6]">
-      <div className="absolute w-[500px] h-[600px] left-[-100px] top-[-120px] bg-[var(--color-cloud-amin)] rounded-[50%] -rotate-[30deg]" />
-      <div className="absolute w-[400px] h-[300px] left-[200px] top-[-60px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
+      <div className="absolute w-[500px] h-[600px] left-[-100px] top-[-120px] bg-[var(--color-cloud-secondary)] rounded-[50%] -rotate-[30deg]" />
+      <div className="absolute w-[400px] h-[300px] left-[200px] top-[-60px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
     </div>
   );
 };
 const Cloud11 = () => {
   return (
     <div className="absolute left-[50%] translate-x-[600px] top-[240px] z-[6]">
-      <div className="absolute w-[500px] h-[600px] left-[-100px] top-[-120px] bg-[var(--color-cloud-amin)] rounded-[50%] -rotate-[30deg]" />
-      <div className="absolute w-[400px] h-[300px] left-[200px] top-[-60px] bg-[var(--color-cloud-amin)] rounded-[50%]" />
+      <div className="absolute w-[500px] h-[600px] left-[-100px] top-[-120px] bg-[var(--color-cloud-secondary)] rounded-[50%] -rotate-[30deg]" />
+      <div className="absolute w-[400px] h-[300px] left-[200px] top-[-60px] bg-[var(--color-cloud-secondary)] rounded-[50%]" />
     </div>
   );
 };
