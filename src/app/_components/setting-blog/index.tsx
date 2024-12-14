@@ -5,11 +5,13 @@ import SettingSwitch from '../setting-switch';
 import SettingTheme from '../setting-theme';
 import SettingVoice from '../setting-voice';
 import classNames from 'classnames';
+import SettingDirectory from '../setting-directory';
 
 export default function Index() {
   const [isShowSettings, setIsShowSettings] = useState(false);
   const [isVoice, setIsVoice] = useState(false);
   const [isLight, setIsLight] = useState(true);
+  const [isShowDirectory, setIsShowDirectory] = useState(false);
 
   useEffect(() => {
     document.documentElement.setAttribute(
@@ -20,6 +22,13 @@ export default function Index() {
 
   return (
     <div className="setting-blog">
+      <SettingDirectory
+        className={classNames('setting-button setting-button-3', {
+          'setting-button-hidden': !isShowSettings,
+        })}
+        value={isShowDirectory}
+        onClick={(value) => setIsShowDirectory(value)}
+      />
       <SettingVoice
         className={classNames('setting-button setting-button-2', {
           'setting-button-hidden': !isShowSettings,

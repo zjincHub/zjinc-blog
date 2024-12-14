@@ -56,6 +56,7 @@
   @import './_components/setting-switch/index.css';
   @import './_components/setting-theme/index.css';
   @import './_components/setting-voice/index.css';
+  @import './_components/setting-directory/index.css';
 
   .mdx-code .shiki {
     margin: 0px;

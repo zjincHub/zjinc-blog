@@ -18,6 +18,11 @@
   z-index: 7;
 }
 
+.setting-blog .setting-button-3 {
+  transform: translateY(-42px);
+  z-index: 6;
+}
+
 .setting-blog .setting-button-hidden {
   opacity: 0;
   transform: translateY(10px);

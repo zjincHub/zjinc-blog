@@ -1,0 +1,54 @@
+.setting-directory {
+  width: 40px;
+  height: 40px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: left;
+  border-radius: 50%;
+  background-color: var(--color-bg-setting-btn);
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.setting-directory .setting-directory-left {
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.setting-directory-left .rect {
+  width: 8px;
+  height: 3px;
+  margin: 1px;
+  border: 3px solid var(--color-setting-btn);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.setting-directory .setting-directory-right {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.setting-directory-right .line {
+  height: 2px;
+  width: 4px;
+  background-color: var(--color-setting-btn);
+  margin: 1.5px;
+}
+
+.setting-directory-close .setting-directory-right {
+  transform: translateX(4px);
+  opacity: 0;
+}
+
+.setting-directory-close .setting-directory-left .rect {
+  width: 12px;
+}
