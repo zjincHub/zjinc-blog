@@ -1,3 +1,30 @@
+# ESLint 依赖与插件
+
+ESLint 依赖：提供了代码校验功能，你可以通过命令行运行 ESLint 来校验项目中的代码，还可以通过 .eslintrc.js 文件来自定义规则。
+
+Eslint 插件：提供了实时反馈校验结果，在编辑器中显示错误和警告的功能，可以通过修改 vscode 编辑器设置来自定义规则。
+注意：虽然 Eslint 插件也提供了代码校验功能，但是在没有 ESLint 依赖的情况下，无法通过识别.eslintrc.js 文件来自定义规则。
+
+# Prettier 依赖与插件
+
+Prettier 依赖：提供了文件格式化功能，你可以通过命令行运行 Prettier 来格式化整个项目或指定文件，还可以通过 prettier.config.js 或其他配置文件来自定义规则。
+
+Prettier 插件：提供了快捷键触发格式化功能，可以通过修改 vscode 编辑器设置来自定义规则。
+注意：虽然 Prettier 插件也提供了代码格式化功能，但是在没有 Prettier 依赖的情况下，无法通过识别 prettier.config.js 等配置文件来自定义规则。
+
+Prettier：
+配置文件：prettier.config.js（还有许多其他文件名可以使用：https://prettier.io/docs/en/configuration）
+忽略文件：.prettierignore、还可以在代码中添加注释来跳过某段代码的格式化（https://prettier.io/docs/en/ignore）
+配置项：https://prettier.io/docs/en/options
+Pritter 还有部分我不常用的功能（overrides、共享配置、api 等），可以戳官网查看。
+
+相关插件（prettier 官网表示除非遇到特殊情况，否则不建议使用以下插件，它们的速度远慢于 prettier）：
+eslint-config-prettier：这是一个 ESLint 配置扩展，用于关闭所有与 Prettier 冲突的 ESLint 规则。它确保 ESLint 不会干扰 Prettier 的格式化，从而避免格式化冲突。
+eslint-plugin-prettier：这个 ESLint 插件将 Prettier 的格式化规则作为 ESLint 规则运行。当你运行 ESLint 时，它会检查代码是否符合 Prettier 的格式化规则，并在代码不符合时给出错误提示。
+stylelint-prettier：这是一个用于将 Prettier 集成到 Stylelint 的插件。它允许你在使用 Stylelint 检查 CSS/SCSS 等样式文件时，确保样式代码符合 Prettier 的格式化规则。
+prettier-eslint：这个工具结合了 ESLint 和 Prettier 的功能，可以先运行 ESLint 来修复代码中的问题，然后再使用 Prettier 对代码进行格式化。这确保代码在符合 ESLint 规则的基础上进行格式化。
+prettier-stylelint：类似于 prettier-eslint，这个工具结合了 Stylelint 和 Prettier 的功能。它会在使用 Stylelint 检查样式代码后，使用 Prettier 进行格式化，确保样式代码符合两者的规范。
+
 # Eslint 配置
 
 ```javascript
