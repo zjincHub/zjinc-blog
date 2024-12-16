@@ -1,22 +1,91 @@
-# ESLint 依赖与插件
+平时在搭建前端项目时都是同时引入 ESLint 和 Prettier 项目依赖并在 vscode 上安装两者的插件，眼睛一闭就开始开发了，遇到问题就 AI、Google + 百度，没什么不能解决的。导致我每天都在使用这些工具，但并不了解它们，为了把这两位老战友的能力尽可能地发挥出来，就写了这篇博客。
 
-ESLint 依赖：提供了代码校验功能，你可以通过命令行运行 ESLint 来校验项目中的代码，还可以通过 .eslintrc.js 文件来自定义规则。
+写这篇博客的目的：
 
-Eslint 插件：提供了实时反馈校验结果，在编辑器中显示错误和警告的功能，可以通过修改 vscode 编辑器设置来自定义规则。
-注意：虽然 Eslint 插件也提供了代码校验功能，但是在没有 ESLint 依赖的情况下，无法通过识别.eslintrc.js 文件来自定义规则。
+- 理清 ESLint 项目依赖和 ESLint 编辑器插件在功能上的区别。
+- 理清 Prettier 项目依赖和 Prettier 编辑器插件在功能上的区别。
+- 收集 ESLint 和 Prettier 常用配置项。
 
-# Prettier 依赖与插件
+# ESLint 编辑器插件的功能
 
-Prettier 依赖：提供了文件格式化功能，你可以通过命令行运行 Prettier 来格式化整个项目或指定文件，还可以通过 prettier.config.js 或其他配置文件来自定义规则。
+1. 显示 ESLint 校验的错误和警告，直接在代码中标注（如下划线、警告图标）。
+2. 在编辑器中提供快速修复和自动修复功能。
+3. 通过 VS Code 的 settings.json 配置 ESLint 编辑器插件的行为，如：是否启用 ESLint 插件 eslint.enable、指定插件需要校验的文件类型 eslint.validate 等。
 
-Prettier 插件：提供了快捷键触发格式化功能，可以通过修改 vscode 编辑器设置来自定义规则。
-注意：虽然 Prettier 插件也提供了代码格式化功能，但是在没有 Prettier 依赖的情况下，无法通过识别 prettier.config.js 等配置文件来自定义规则。
+# ESLint 项目依赖的功能
 
-Prettier：
-配置文件：prettier.config.js（还有许多其他文件名可以使用：https://prettier.io/docs/en/configuration）
-忽略文件：.prettierignore、还可以在代码中添加注释来跳过某段代码的格式化（https://prettier.io/docs/en/ignore）
-配置项：https://prettier.io/docs/en/options
-Pritter 还有部分我不常用的功能（overrides、共享配置、api 等），可以戳官网查看。
+1. 通过 .eslintrc.js 等配置文件定义校验规则。
+2. 可以安装和配置 ESLint 插件（如 eslint-plugin-react、eslint-plugin-vue）以支持特定框架的代码规范。
+3. 可以在命令行执行代码校验和自动修复功能。
+
+# ESLint 项目依赖与编辑器插件的区别
+
+功能 ESLint 插件（VS Code） ESLint 依赖（项目配置）
+定位 编辑器辅助工具，提供实时反馈和代码修复 项目依赖，定义和控制代码校验规则
+规则定义 不支持自定义校验规则 支持完整规则定义、插件扩展、解析器设置等
+文件类型支持 通过 eslint.validate 指定需要校验的文件类型 通过解析器和插件支持多种文件
+自动修复 提供基于默认规则的自动修复功能 通过 eslint --fix 在命令行实现自定义规则自动修复
+团队共享能力 仅在本地 VS Code 中生效，不支持共享配置 配置文件可共享，适用于整个团队和 CI 环境
+
+# ESLint 配置
+
+```javascript
+module.exports = {
+  extends: [
+    'eslint:recommended', // 基础的 ESLint 推荐规则
+    'plugin:react/recommended', // React 相关规则
+    'airbnb', // Airbnb 风格指南
+  ],
+  parserOptions: {
+    ecmaVersion: 2020, // 允许使用 ECMAScript 2020 语法
+    sourceType: 'module', // 支持模块导入
+    ecmaFeatures: {
+      jsx: true, // 支持 JSX 语法
+    },
+  },
+  env: {
+    browser: true, // 浏览器环境
+    node: true, // Node.js 环境
+    es2020: true, // 支持 ES2020 特性
+  },
+  plugins: [
+    'react', // 使用 React 插件
+  ],
+  rules: {
+    'no-console': 'warn', // 不允许使用 console.log()
+    'react/jsx-uses-react': 'off', // React 17 后不需要导入 React
+    'react/react-in-jsx-scope': 'off', // React 17 后不需要在 JSX 文件中使用 React
+    eqeqeq: 'error', // 强制使用 === 和 !==
+    'no-var': 'error', // 禁止使用 var
+    'prefer-const': 'error', // 推荐使用 const 代替 let
+    'arrow-body-style': ['error', 'as-needed'], // 对箭头函数的要求：必要时使用大括号
+    'consistent-return': 'error', // 函数返回一致性
+    'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }], // 未使用的变量会发出警告，但忽略以 _ 开头的参数
+    'no-magic-numbers': ['warn', { ignore: [0, 1] }], // 忽略数字常量 0 和 1
+    indent: ['error', 2], // 使用两个空格进行缩进
+    'linebreak-style': ['error', 'unix'], // 强制使用 Unix 风格换行符（适用于 Linux 和 macOS）
+    'no-trailing-spaces': 'error', // 禁止行尾空格
+    'eol-last': 'error', // 文件末尾必须有一个空行
+    'max-len': ['error', { code: 80 }], // 每行最多 80 个字符
+  },
+  settings: {
+    react: {
+      version: 'detect', // 自动检测 React 的版本
+    },
+  },
+};
+```
+
+# Prettier 编辑器插件的功能
+
+1. 代码实时自动格式化。
+2. 通过 vscode 配置文件进行格式化规则配置。
+3. 支持 .prettierignore 文件，自动跳过忽略的文件。
+
+# Prettier 项目依赖的功能
+
+1. 通过 prettier.config.js 配置文件进行格式化规则配置。还有许多其他文件名可以使用https://prettier.io/docs/en/configuration。
+2. Pritter 还有部分我不常用的功能（overrides、共享配置、api 等），可以戳官网https://prettier.io/docs/en/options 。
 
 相关插件（prettier 官网表示除非遇到特殊情况，否则不建议使用以下插件，它们的速度远慢于 prettier）：
 eslint-config-prettier：这是一个 ESLint 配置扩展，用于关闭所有与 Prettier 冲突的 ESLint 规则。它确保 ESLint 不会干扰 Prettier 的格式化，从而避免格式化冲突。
@@ -25,59 +94,53 @@ stylelint-prettier：这是一个用于将 Prettier 集成到 Stylelint 的插�
 prettier-eslint：这个工具结合了 ESLint 和 Prettier 的功能，可以先运行 ESLint 来修复代码中的问题，然后再使用 Prettier 对代码进行格式化。这确保代码在符合 ESLint 规则的基础上进行格式化。
 prettier-stylelint：类似于 prettier-eslint，这个工具结合了 Stylelint 和 Prettier 的功能。它会在使用 Stylelint 检查样式代码后，使用 Prettier 进行格式化，确保样式代码符合两者的规范。
 
-# Eslint 配置
+# Prettier 项目依赖与编辑器插件的区别
 
-```javascript
-module.exports = {
-  root: true,
-  extends: [require.resolve('@cfe/eslint-config-ytian')],
-  rules: {
-    'react/require-default-props': 'off',
-    '@typescript-eslint/no-empty-function': 'off',
-    'max-classes-per-file': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-  },
-};
-```
+特性 Prettier 插件（VS Code 插件） Prettier 项目依赖
+定位 编辑器辅助工具，提供实时自动代码格式化 项目依赖，定义和控制代码格式化规则
+规则定义 通过 VS Code 配置（settings.json）配置少量规则 支持通过 .prettierrc、prettier.config.js 等文件进行完整配置
+文件类型支持 支持常见文件类型，特殊类型需要安装额外插件 支持常见文件类型，特殊类型需要引入依赖并进行插件配置，可以通过 overrides 在配置文件中设置不同文件的不同规则
+自动格式化 提供快捷键格式化能力 通过命令实现格式化
+团队共享能力 仅在本地 VS Code 中生效，不支持共享配置 配置文件可共享，适用于整个团队和 CI 环境
+识别 .prettierignore 文件 可以识别并遵守 .prettierignore 文件 可以识别并遵守 .prettierignore 文件
 
 # Prettier 配置
 
 ```javascript
-/* eslint-disable max-len */
-// 规范项目代码书写
 module.exports = {
-  // 使用单引号
+  // 是否使用单引号而不是双引号
   singleQuote: true,
-  // 结尾分号
+  // 在语句结尾是否使用分号
   semi: true,
-  // Specify the number of spaces per indentation-level.
+  // 是否在多行对象、数组等末尾添加逗号。选择“none”表示不添加逗号
+  trailingComma: 'es5', // 可选值：none | es5 | all
+  // 设置每行的最大字符数
+  printWidth: 80,
+  // 每个缩进级别的空格数
   tabWidth: 2,
-  // Print trailing commas wherever possible when multi-line. (A single-line array, for example, never gets trailing commas.)
-  trailingComma: 'es5',
-  // Specify the line length that the printer will wrap on.
-  // printWidth: 100,
-  // Use single quotes instead of double quotes in JSX.
-  jsxSingleQuote: true,
-  // Print spaces between brackets in object literals.
+  // 是否在对象字面量的花括号两侧加上空格
   bracketSpacing: true,
-  // Include parentheses around a sole arrow function parameter.
-  /**
-   * Valid options:
-      "avoid" - Omit parens when possible. Example: x => x
-      "always" - Always include parens. Example: (x) => x
-   */
-  arrowParens: 'always',
-  // Format only a segment of a file.
-  rangeStart: 0,
-  rangeEnd: Infinity,
-  // Prettier can restrict itself to only format files that contain a special comment, called a pragma, at the top of the file. This is very useful when gradually transitioning large, unformatted codebases to prettier.
-  requirePragma: false,
-  // Prettier can insert a special @format marker at the top of files specifying that the file has been formatted with prettier. This works well when used in tandem with the --require-pragma option. If there is already a docblock at the top of the file then this option will add a newline to it with the @format marker.
-  insertPragma: false,
-  proseWrap: 'never',
-  // Specify the global whitespace sensitivity for HTML files
-  htmlWhitespaceSensitivity: 'css',
-  // For historical reasons, there exist two commonly used flavors of line endings in text files. That is \n (or LF for Line Feed) and \r\n (or CRLF for Carriage Return + Line Feed).
-  endOfLine: 'auto',
+  // JSX 标签的闭合括号是否与最后一行元素在同一行
+  jsxBracketSameLine: false,
+  // 箭头函数参数是否始终使用括号
+  arrowParens: 'always', // 可选值：always | avoid
+  // 行尾是否需要使用换行符
+  endOfLine: 'lf', // 可选值：auto | lf | crlf | cr
+  // 是否对 HTML 文件中的属性值添加引号
+  htmlWhitespaceSensitivity: 'css', // 可选值：css | strict | ignore
+  // 是否删除已不再使用的 HTML 空格
+  vueIndentScriptAndStyle: false,
+  // 是否对 CSS/SCSS 等文件做格式化
+  cssEnable: true,
+  // 是否根据项目文件的内容选择是否自动加引号
+  quoteProps: 'as-needed', // 可选值：as-needed | consistent | preserve
+  // 是否格式化代码中的 JavaScript 和 JSON
+  embeddedLanguageFormatting: 'auto', // 可选值：auto | off
+  // 是否忽略 prettierrc 配置中的注释
+  ignorePath: '.prettierignore', // 指定忽略的文件列表文件
+  // 是否格式化 Markdown 文件中的代码块
+  markdownWhitespaceSensitivity: 'css', // 可选值：css | strict | ignore
+  // 格式化时是否删除注释
+  deleteUnused: false, // 启用删除不必要的注释
 };
 ```
