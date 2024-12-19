@@ -124,11 +124,11 @@ const Cloud11 = () => {
   );
 };
 
-const Light = () => {
-  return (
-    <div className="absolute w-full aspect-square bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-sky-500 to-sky-50" />
-  );
-};
+// const Light = () => {
+//   return (
+//     <div className="absolute w-full aspect-square bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-sky-500 to-sky-50" />
+//   );
+// };
 
 const Sky = () => {
   return (
