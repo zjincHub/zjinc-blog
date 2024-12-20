@@ -4,21 +4,29 @@ import blogComponents from '@blog';
 
 const domain = 'https://www.zjinc.top';
 
-type Frequency =
-  | 'always'
-  | 'hourly'
-  | 'daily'
-  | 'weekly'
-  | 'monthly'
-  | 'yearly'
-  | 'never';
+enum EnumFrequency {
+  always = 'always',
+  hourly = 'hourly',
+  daily = 'daily',
+  weekly = 'weekly',
+  monthly = 'monthly',
+  yearly = 'yearly',
+  never = 'never',
+}
+
+enum EnumLevel {
+  Firsr = 1,
+  Second = 0.8,
+  Third = 0.6,
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogMaps = blogComponents.map((blog) => {
     return {
       url: `${domain}${blog.path}`,
       lastModified: chineseDateToDate(blog.updateDate),
-      changeFrequency: 'weekly' as Frequency,
-      priority: 0.5,
+      changeFrequency: EnumFrequency.weekly,
+      priority: EnumLevel.Second,
     };
   });
 
@@ -26,8 +34,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${domain}/`,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 1,
+      changeFrequency: EnumFrequency.monthly,
+      priority: EnumLevel.Firsr,
     },
     ...blogMaps,
   ];
