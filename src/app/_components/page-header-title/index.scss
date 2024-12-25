@@ -1,0 +1,21 @@
+.page-header-title {
+  position: relative;
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 12px;
+
+  h1 {
+    margin-top: 0;
+    color: #075985;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .page-message {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+}

@@ -2,6 +2,7 @@
 import classNames from 'classnames';
 import { useRouter } from 'next/navigation';
 import { Hash } from 'lucide-react';
+import './index.scss';
 
 export default function Index(props: IProps) {
   const { value, activityTags } = props;
@@ -24,8 +25,9 @@ export default function Index(props: IProps) {
   return (
     <button
       className={classNames('button-tag', isActive && 'button-tag-active')}
-      onClick={onClickTag}>
-      <Hash className="w-3 h-3 stroke-[2]" />
+      onClick={onClickTag}
+    >
+      <Hash className="icon" />
       {value}
     </button>
   );

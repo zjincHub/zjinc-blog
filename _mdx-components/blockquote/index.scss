@@ -1,0 +1,25 @@
+.blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.blockquote-h1 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #075985;
+  text-align: right;
+  padding-right: 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.blockquote-p {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #f1f5f9;
+  box-sizing: border-box;
+  border: 0;
+  border-left: 8px solid #60a5fa;
+}

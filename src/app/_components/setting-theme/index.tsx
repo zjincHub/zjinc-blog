@@ -1,6 +1,7 @@
 'use client';
 
 import classNames from 'classnames';
+import './index.scss';
 
 export default function Index(props: {
   value: boolean;
@@ -12,7 +13,8 @@ export default function Index(props: {
       className={classNames('setting-theme', props.className, {
         'setting-theme-dark': props.value,
       })}
-      onClick={() => props.onClick(!props.value)}>
+      onClick={() => props.onClick(!props.value)}
+    >
       <div className="sun-rays"></div>
       <div className="main-circle"></div>
     </button>

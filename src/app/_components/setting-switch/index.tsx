@@ -1,6 +1,7 @@
 'use client';
 
 import classNames from 'classnames';
+import './index.scss';
 
 export default function Index(props: {
   value: boolean;

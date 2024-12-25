@@ -1,20 +1,13 @@
-import H1 from './h1';
-import P from './p';
+import H1 from '../h1';
+import P from '../p';
+import './index.scss';
 
 const renderH1 = (string: string) => {
-  return (
-    <P className={'text-base font-normal text-sky-800 text-right pr-6 mt-3'}>
-      {string}
-    </P>
-  );
+  return <P className={'blockquote-h1'}>{string}</P>;
 };
 
 const renderP = (string: string) => {
-  return (
-    <P className="w-full px-6 py-4 rounded-lg bg-slate-100 box-border border-0 border-l-8 border-l-blue-400 border-solid">
-      {string}
-    </P>
-  );
+  return <P className="blockquote-p">{string}</P>;
 };
 
 export default function Blockquote(props: { children?: any }): JSX.Element {
@@ -26,5 +19,5 @@ export default function Blockquote(props: { children?: any }): JSX.Element {
       children.push(renderP(child.props.children));
     }
   });
-  return <blockquote className="mx-0 my-4">{children}</blockquote>;
+  return <blockquote className="blockquote">{children}</blockquote>;
 }

@@ -1,0 +1,53 @@
+@import './theme-light.scss';
+@import './theme-dark.scss';
+
+/* prettier-ignore */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  background-color: var(--color-background-main);
+  // 文字渲染优化
+  -webkit-font-smoothing: antialiased;
+}
+
+/* prettier-ignore */
+img, picture, video, canvas, svg {
+  // 多媒体布局优化
+  display: block;
+  max-width: 100%;
+}
+
+/* prettier-ignore */
+input, button, textarea, select {
+  // 字体继承，防止由于表单文字小而引发的手机端聚焦镜头放大
+  font: inherit;
+}
+
+/* prettier-ignore */
+p, h1, h2, h3, h4, h5, h6 {
+  // 避免文本溢出
+  overflow-wrap: break-word;
+}
+
+p {
+  // 改善换行
+  text-wrap: pretty;
+}
+
+/* prettier-ignore */
+h1, h2, h3, h4, h5, h6 {
+  // 改善换行
+  text-wrap: balance;
+}
+
+a {
+  text-decoration: none;
+}

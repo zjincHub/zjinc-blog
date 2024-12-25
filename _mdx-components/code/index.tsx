@@ -1,4 +1,5 @@
 import { use } from 'react';
+import './index.scss';
 
 const DEFAULT_LANG = 'javascript';
 const DEFAULT_THEME = 'everforest-dark';
@@ -16,22 +17,25 @@ async function Blockquote(props: IProps): Promise<JSX.Element> {
       })
     : '';
   return (
-    <div className="mdx-code bg-[#2f353a] rounded-[8px]">
-      <div className="flex items-center justify-between p-4">
-        <div className="flex items-center">
-          <div className="px-1">
-            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+    <div className="mdx-code">
+      <div className="header">
+        <div className="decorate">
+          <div className="decorate-item">
+            <div className="red" />
           </div>
-          <div className="px-1">
-            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div className="decorate-item">
+            <div className="yellow" />
           </div>
-          <div className="px-1">
-            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+          <div className="decorate-item">
+            <div className="green" />
           </div>
         </div>
-        <div className="text-white text-sm">{lang}</div>
+        <div className="language">{lang}</div>
       </div>
-      <div className="px-5 pb-4" dangerouslySetInnerHTML={{ __html: html }} />
+      <div
+        className="mdx-code-content"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </div>
   );
 }

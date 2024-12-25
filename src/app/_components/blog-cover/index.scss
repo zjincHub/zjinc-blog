@@ -1,0 +1,51 @@
+.blog-cover {
+  width: 100%;
+  max-width: 800px;
+  background: transparent;
+  margin: 0 auto;
+
+  .title-wrapper {
+    display: inline-block;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+
+    .title-link {
+      color: #4a5568;
+    }
+  }
+
+  .tags-wrapper {
+    margin-top: 0.75rem;
+    display: flex;
+    align-items: center;
+    color: #776b5d;
+    font-weight: bold;
+    font-size: 0.875rem;
+
+    .tag-item {
+      display: flex;
+      align-items: center;
+      margin-right: 0.5rem;
+
+      .icon {
+        width: 0.75rem;
+        height: 0.75rem;
+        stroke-width: 3;
+      }
+    }
+  }
+
+  .summary-wrapper {
+    margin-top: 0.5rem;
+    color: #4a5568;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+.blog-cover + .blog-cover {
+  margin-top: 46px;
+}

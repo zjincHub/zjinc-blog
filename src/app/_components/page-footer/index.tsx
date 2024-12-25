@@ -1,6 +1,8 @@
+import './index.scss';
+
 export default function Index() {
   return (
-    <div className="relative m-auto mt-16 text-center">
+    <div className="page-footer">
       <div>
         备案号:&#160;
         <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">

@@ -6,6 +6,7 @@ import SettingTheme from '../setting-theme';
 import SettingVoice from '../setting-voice';
 import classNames from 'classnames';
 import SettingDirectory from '../setting-directory';
+import './index.scss';
 
 export default function Index() {
   const [isShowSettings, setIsShowSettings] = useState(false);

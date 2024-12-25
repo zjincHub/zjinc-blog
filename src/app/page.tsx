@@ -4,6 +4,7 @@ import PageFooter from './_components/page-footer';
 import BlogCover from './_components/blog-cover';
 import ButtonTag from './_components/button-tag';
 import { chineseDateToDate } from '@/utils/time';
+import './page.scss';
 
 // 排序后的博客列表
 const sortBlogs = blogs.sort((a, b) => {
@@ -26,13 +27,13 @@ export default function Index(props: { searchParams: { tags: string } }) {
   });
 
   return (
-    <main className="bg-[var(--color-background-main)]">
+    <main className="page-main">
       {/* 顶部云层 */}
       <PageHeaderCloud />
       {/* 首页内容 */}
-      <div className="relative z-0 w-full max-w-[1180px] bg-transparent m-auto flex">
+      <div className="page-content">
         {/* 博客列表 */}
-        <div className="w-full max-w-[880px] px-12">
+        <div className="blog-wrapper">
           {filterBlogs.map((item) => (
             <BlogCover
               key={item.path}
@@ -44,8 +45,8 @@ export default function Index(props: { searchParams: { tags: string } }) {
           ))}
         </div>
         {/* 博客标签 */}
-        <div className="w-full max-w-[300px] px-10 translate-y-24">
-          <div className="text-base font-bold text-gray-700">分类标签</div>
+        <div className="blog-tags-wrapper">
+          <div className="title">分类标签</div>
           {tagsTotal.map((tag, index) => (
             <ButtonTag key={index} value={tag} activityTags={tagList} />
           ))}

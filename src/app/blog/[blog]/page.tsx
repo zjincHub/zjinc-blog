@@ -4,6 +4,7 @@ import PageHeaderCloud from '@/app/_components/page-header-cloud';
 import PageHeaderTitle from '@/app/_components/page-header-title';
 import BlogDirectory from '@/app/_components/blog-directory';
 import SettingBlog from '@/app/_components/setting-blog';
+import './page.scss';
 
 /**
  * 博客页面
@@ -16,19 +17,19 @@ export default function Index(props: IProps) {
   if (!blog) notFound();
   const { component: BlogComponent, ...abstract } = blog;
   return (
-    <>
+    <div className="blog">
       <PageHeaderCloud />
       <PageHeaderTitle {...abstract} />
-      <div className="relative z-0 w-full max-w-[1180px] bg-transparent m-auto flex">
-        <div className="w-full max-w-[880px] bg-transparent relative z-50 m-auto px-12 box-border">
+      <div className="blog-content">
+        <div className="left">
           <BlogComponent />
         </div>
-        <div className="w-full max-w-[300px] px-10 translate-y-5">
+        <div className="right">
           <BlogDirectory mdxContent={BlogComponent} />
         </div>
       </div>
       <SettingBlog />
-    </>
+    </div>
   );
 }
 

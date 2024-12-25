@@ -11,14 +11,15 @@
   background-color: transparent;
   transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
   font-weight: bold;
+  font-size: 14px;
   color: #374151;
   cursor: pointer;
-}
 
-.button-read-more .icon {
-  transform: translateX(0%);
-  transition: 0.2s linear;
-  animation: attention 1.2s linear infinite;
+  .icon {
+    transform: translateX(0%);
+    transition: 0.2s linear;
+    animation: attention 1.2s linear infinite;
+  }
 }
 
 .button-read-more::after {

@@ -12,6 +12,12 @@
   border-radius: 6px;
   transition: all 0.3s;
   cursor: pointer;
+
+  .icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    stroke-width: 2;
+  }
 }
 
 .button-tag-active {

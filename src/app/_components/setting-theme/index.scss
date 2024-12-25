@@ -10,8 +10,10 @@
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
-    0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  box-shadow:
+    0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 9px 28px 8px rgba(0, 0, 0, 0.05);
 }
 
 .setting-theme .main-circle {
@@ -50,7 +52,8 @@
   width: 3px;
   height: 3px;
   background-color: var(--color-setting-btn);
-  box-shadow: 0 10px 0 var(--color-setting-btn),
+  box-shadow:
+    0 10px 0 var(--color-setting-btn),
     0 -10px 0 var(--color-setting-btn);
   border-radius: 50%;
 }

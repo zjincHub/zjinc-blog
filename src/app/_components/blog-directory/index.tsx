@@ -1,6 +1,7 @@
 import { MDXContent } from 'mdx/types';
 import BlogDirectoryItem from '../blog-directory-item';
-import H1 from '../../../../_mdx-components/h1';
+import H1 from '/_mdx-components/h1';
+import './index.scss';
 
 export default function Index(props: IProps) {
   const component = props.mdxContent({});

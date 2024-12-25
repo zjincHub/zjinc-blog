@@ -1,6 +1,7 @@
 'use client';
 
 import classNames from 'classnames';
+import './index.scss';
 
 export default function Index(props: {
   value: boolean;
@@ -14,7 +15,8 @@ export default function Index(props: {
         { 'setting-directory-close': !props.value },
         props.className
       )}
-      onClick={() => props.onClick(!props.value)}>
+      onClick={() => props.onClick(!props.value)}
+    >
       <div className="setting-directory-left">
         <div className="rect" />
         <div className="rect" />

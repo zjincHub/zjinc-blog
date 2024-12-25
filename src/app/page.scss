@@ -1,0 +1,34 @@
+.page-main {
+  background-color: var(--color-background-main);
+
+  .page-content {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    max-width: 1180px;
+    background: transparent;
+    margin: 0 auto;
+    display: flex;
+
+    .blog-wrapper {
+      width: 100%;
+      max-width: 880px;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    .blog-tags-wrapper {
+      width: 100%;
+      max-width: 300px;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+      transform: translateY(6rem);
+
+      .title {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #4a5568;
+      }
+    }
+  }
+}
