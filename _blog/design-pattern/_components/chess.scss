@@ -1,0 +1,14 @@
+.chess {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .chess-board-wrapper {
+    max-width: 32rem;
+    width: 100%;
+  }
+
+  .chess-board-wrapper > * + * {
+    margin-top: 1.5rem;
+  }
+}

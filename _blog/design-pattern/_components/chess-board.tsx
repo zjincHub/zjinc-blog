@@ -1,5 +1,6 @@
 import React from 'react';
 import ChessCell from './chess-cell';
+import './chess-board.scss';
 
 export type Piece = {
   color: 'black' | 'white';
@@ -14,45 +15,45 @@ const COLUMNS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
 export default function ChessBoard({ board, onCellClick }: IChessBoardProps) {
   return (
-    <div className="relative bg-amber-200 p-8 rounded-xl shadow-xl">
+    <div className="chess-board">
       {/* Column labels (A-H) - Top */}
-      <div className="absolute top-2 left-8 right-8 flex justify-between px-3">
+      <div className="board-top">
         {COLUMNS.map((col) => (
-          <span key={col} className="text-amber-900 font-medium text-sm">
+          <span key={col} className="item">
             {col}
           </span>
         ))}
       </div>
 
       {/* Row labels (1-8) - Left */}
-      <div className="absolute top-8 bottom-8 left-2 flex flex-col justify-between py-1.5">
+      <div className="board-left">
         {[...Array(8)].map((_, i) => (
-          <span key={i} className="text-amber-900 font-medium text-sm">
+          <span key={i} className="item">
             {8 - i}
           </span>
         ))}
       </div>
 
       {/* Row labels (1-8) - Right */}
-      <div className="absolute top-8 bottom-8 right-2 flex flex-col justify-between py-1.5">
+      <div className="board-right">
         {[...Array(8)].map((_, i) => (
-          <span key={i} className="text-amber-900 font-medium text-sm">
+          <span key={i} className="item">
             {8 - i}
           </span>
         ))}
       </div>
 
       {/* Column labels (A-H) - Bottom */}
-      <div className="absolute bottom-2 left-8 right-8 flex justify-between px-3">
+      <div className="board-bottom">
         {COLUMNS.map((col) => (
-          <span key={col} className="text-amber-900 font-medium text-sm">
+          <span key={col} className="item">
             {col}
           </span>
         ))}
       </div>
 
       {/* Chess board grid */}
-      <div className="grid grid-cols-8 gap-0.5 bg-amber-900 p-0.5 rounded-lg">
+      <div className="board-grid">
         {board.map((row, rowIndex) =>
           row.map((cell, colIndex) => (
             <ChessCell

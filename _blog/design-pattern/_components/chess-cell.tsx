@@ -1,5 +1,6 @@
 import React from 'react';
 import { Crown } from 'lucide-react';
+import './chess-cell.scss';
 
 export type Piece = {
   color: 'black' | 'white';
@@ -21,31 +22,28 @@ export default function ChessCell({
   return (
     <button
       onClick={onClick}
-      className={`
-        aspect-square relative
-        ${isLight ? 'bg-amber-50' : 'bg-amber-800'}
-        hover:opacity-90 transition-opacity
-        flex items-center justify-center
-        group
-      `}>
-      <span className="absolute bottom-0.5 right-1 text-xs opacity-30 group-hover:opacity-100 transition-opacity">
-        {coordinate}
-      </span>
-
+      className="chess-cell"
+      style={
+        isLight
+          ? { backgroundColor: '#fef3c7' }
+          : { backgroundColor: '#78350f' }
+      }>
+      <span className="span">{coordinate}</span>
       {piece && (
         <div
-          className={`
-          absolute inset-3
-          rounded-full
-          ${piece.color === 'white' ? 'bg-white' : 'bg-gray-900'}
-          shadow-lg
-          flex items-center justify-center
-          transition-transform hover:scale-95
-        `}>
+          className="piece"
+          style={
+            piece.color === 'white'
+              ? { backgroundColor: '#ffffff' }
+              : { backgroundColor: '#111827' }
+          }>
           <Crown
-            className={`w-6 h-6 ${
-              piece.color === 'white' ? 'text-amber-900' : 'text-amber-50'
-            }`}
+            className="icon"
+            style={
+              piece.color === 'white'
+                ? { color: '#b45309' }
+                : { color: '#fef3c7' }
+            }
           />
         </div>
       )}

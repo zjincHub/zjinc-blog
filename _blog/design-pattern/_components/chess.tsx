@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import ChessBoard from './chess-board';
+import './chess.scss';
 
 export type Piece = {
   color: 'black' | 'white';
@@ -27,8 +28,8 @@ function App() {
   };
 
   return (
-    <div className="w-full flex justify-center">
-      <div className="max-w-lg w-full space-y-6">
+    <div className="chess">
+      <div className="chess-board-wrapper">
         <ChessBoard board={board} onCellClick={handleCellClick} />
       </div>
     </div>
