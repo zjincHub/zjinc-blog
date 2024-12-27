@@ -1,7 +1,7 @@
 .p {
-  margin: 0;
-  letter-spacing: 0.025em;
-  font-size: 1rem;
-  line-height: 1.625rem;
-  color: #4b5563;
+  margin: var(--margin-top-blog-p) var(--margin-x-blog-text);
+  letter-spacing: var(--letter-spacing-blog-text);
+  font-size: var(--font-size-blog-text);
+  line-height: var(--line-height-blog-text);
+  color: var(--color-blog-text);
 }

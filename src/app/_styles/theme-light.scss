@@ -1,15 +1,22 @@
 :root {
-  /* 页面主体背景色 */
+  // 页面主体背景色
   --color-background-main: #f7fbfc;
-  /* 页面头部天空颜色 */
+  // 页面头部天空颜色
   --color-sky-main: #f7fbfc;
-  /* 页面头部第一层云层颜色 */
+  // 页面头部第一层云层颜色
   --color-cloud-amin: #b9d7ea;
-  /* 页面头部第二层云层颜色 */
+  // 页面头部第二层云层颜色
   --color-cloud-secondary: #d6e6f2;
 
-  /* 设置按钮背景色 */
+  // 博客标题颜色
+  --color-blog-title: #075985;
+  // 博客一级标题颜色
+  --color-blog-h1: #075985;
+  // 博客文字颜色
+  --color-blog-text: #4b5563;
+
+  // 设置按钮背景色
   --color-bg-setting-btn: #f7fbfc;
-  /* 设置按钮文字颜色 */
+  // 设置按钮文字颜色
   --color-setting-btn: #495057;
 }
