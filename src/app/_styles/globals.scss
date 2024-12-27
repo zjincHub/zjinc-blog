@@ -2,6 +2,10 @@
 @import './theme-dark.scss';
 @import './media-normal.scss';
 
+::selection {
+  background: var(--color-bg-selection);
+}
+
 /* prettier-ignore */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -13,7 +17,6 @@
 
 body {
   margin: 0;
-  line-height: 1.5;
   background-color: var(--color-background-main);
   // 文字渲染优化
   -webkit-font-smoothing: antialiased;

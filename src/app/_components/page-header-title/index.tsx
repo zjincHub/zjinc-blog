@@ -5,11 +5,8 @@ export default function Index(props: IProps) {
     <div className="page-header-title">
       <h1>{props.title}</h1>
       <div className="page-message">
-        <span>{`作者：${props.author}`}</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span>{`创建：${props.createDate}`}</span>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span>{`更新：${props.updateDate}`}</span>
+        创建于<strong>{props.createDate}</strong>， 更新于
+        <strong>{props.updateDate}</strong>
       </div>
     </div>
   );

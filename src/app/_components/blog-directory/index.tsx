@@ -18,6 +18,7 @@ export default function Index(props: IProps) {
 
   return (
     <div className="blog-directory">
+      <p>博客目录</p>
       {h1List.map((item, index) => (
         <BlogDirectoryItem key={index} value={item} />
       ))}

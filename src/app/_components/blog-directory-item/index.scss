@@ -1,6 +1,12 @@
 .blog-directory-item {
   margin-top: 0.5rem;
+  line-height: 1.5rem;
   font-size: 1rem;
-  color: #4a5568;
+  color: var(--color-blog-directory-text);
+  transition: color 0.2s ease;
   cursor: pointer;
+}
+
+.blog-directory-item:hover {
+  color: var(--color-blog-directory-text-hover);
 }

@@ -1,5 +1,11 @@
 .blog-directory {
   position: sticky;
-  top: 0;
+  top: 2rem;
   width: 100%;
+  font-size: 1.125rem;
+  color: var(--color-blog-directory-text-hover);
+
+  p {
+    margin-bottom: 1rem;
+  }
 }
