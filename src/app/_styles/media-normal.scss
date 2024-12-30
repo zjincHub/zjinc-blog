@@ -1,4 +1,6 @@
 :root {
+  // 主页行间距
+  --line-height-home-page: 1.725rem;
   // 博客页面两边留白
   --margin-x-blog-page: 1rem;
   // 博客文字边距
@@ -17,4 +19,6 @@
   --font-size-blog-h1: 1.2rem;
   // 博客标题文字大小
   --font-size-blog-title: 2rem;
+  // 博客标题行高
+  --line-height-blog-title: 3rem;
 }

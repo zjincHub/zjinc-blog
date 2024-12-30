@@ -1,9 +1,40 @@
+$color-bg-cell-1: #fef3c7;
+$color-bg-cell-2: #78350f;
+$color-bg-piece-1: #ffffff;
+$color-bg-piece-2: #111827;
+$color-piece-1: #b45309;
+$color-piece-2: #fef3c7;
+
+.chess-cell-bg-1 {
+  background-color: $color-bg-cell-1;
+}
+
+.chess-cell-bg-2 {
+  background-color: $color-bg-cell-2;
+}
+
+.chess-piece-bg-1 {
+  background-color: $color-bg-piece-1;
+}
+
+.chess-piece-bg-2 {
+  background-color: $color-bg-piece-2;
+}
+
+.chess-piece-color-1 {
+  color: $color-piece-1;
+}
+
+.chess-piece-color-2 {
+  color: $color-piece-2;
+}
+
 .chess-cell {
   position: relative;
-  background-color: #fef3c7;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 0;
   transition: opacity 0.3s;
   aspect-ratio: 1;
 
@@ -11,15 +42,15 @@
     position: absolute;
     bottom: 0.125rem;
     right: 0.25rem;
-    font-size: 0.75rem;
+    font-size: 0.5rem;
     opacity: 0.3;
     transition: opacity 0.3s;
   }
 
   .piece {
     position: absolute;
-    inset: 0.75rem;
-    border-radius: 9999px;
+    inset: 20%;
+    border-radius: 50%;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
@@ -27,12 +58,18 @@
     transition: transform 0.3s;
 
     .icon {
-      width: 1.5rem;
-      height: 1.5rem;
+      width: 60%;
+      height: 60%;
     }
   }
 }
 
 .chess-cell:hover {
-  opacity: 0.9;
+  opacity: 0.8;
+}
+
+@media (max-width: 36rem) {
+  .chess-cell .span {
+    display: none;
+  }
 }

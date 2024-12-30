@@ -7,7 +7,7 @@
 
   h1 {
     margin: 0 var(--margin-x-blog-text);
-    line-height: var(--font-size-blog-title);
+    line-height: var(--line-height-blog-title);
     letter-spacing: var(--letter-spacing-blog-text);
     font-weight: bold;
     font-size: var(--font-size-blog-title);
@@ -22,5 +22,17 @@
     letter-spacing: var(--letter-spacing-blog-text);
     font-size: 0.875rem;
     color: var(--color-blog-text);
+  }
+}
+
+@media (max-width: 70rem) {
+  .page-header-title {
+    h1 {
+      text-align: center;
+    }
+
+    .page-message {
+      text-align: center;
+    }
   }
 }

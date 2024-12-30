@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 import { Crown } from 'lucide-react';
 import './chess-cell.scss';
 
@@ -22,28 +23,23 @@ export default function ChessCell({
   return (
     <button
       onClick={onClick}
-      className="chess-cell"
-      style={
-        isLight
-          ? { backgroundColor: '#fef3c7' }
-          : { backgroundColor: '#78350f' }
-      }>
+      className={classNames('chess-cell', {
+        'chess-cell-bg-1': isLight,
+        'chess-cell-bg-2': !isLight,
+      })}>
+      {/* 棋盘格子标识 */}
       <span className="span">{coordinate}</span>
       {piece && (
         <div
-          className="piece"
-          style={
-            piece.color === 'white'
-              ? { backgroundColor: '#ffffff' }
-              : { backgroundColor: '#111827' }
-          }>
+          className={classNames('piece', {
+            'chess-piece-bg-1': piece.color === 'white',
+            'chess-piece-bg-2': piece.color !== 'white',
+          })}>
           <Crown
-            className="icon"
-            style={
-              piece.color === 'white'
-                ? { color: '#b45309' }
-                : { color: '#fef3c7' }
-            }
+            className={classNames('icon', {
+              'chess-piece-color-1': piece.color === 'white',
+              'chess-piece-color-2': piece.color !== 'white',
+            })}
           />
         </div>
       )}

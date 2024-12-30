@@ -9,22 +9,20 @@ export type Piece = {
 } | null;
 
 function App() {
+  const [currentColor, setCurrentColor] = useState<'black' | 'white'>('white');
   const [board, setBoard] = useState<(Piece | null)[][]>(
     Array(8)
       .fill(null)
       .map(() => Array(8).fill(null))
   );
-  const [currentColor, setCurrentColor] = useState<'black' | 'white'>('white');
 
   const handleCellClick = (row: number, col: number) => {
     const newBoard = [...board.map((row) => [...row])];
-    if (newBoard[row][col]) {
-      newBoard[row][col] = null;
-    } else {
+    if (!newBoard[row][col]) {
       newBoard[row][col] = { color: currentColor };
+      setBoard(newBoard);
+      setCurrentColor((current) => (current === 'white' ? 'black' : 'white'));
     }
-    setBoard(newBoard);
-    setCurrentColor((current) => (current === 'white' ? 'black' : 'white'));
   };
 
   return (
