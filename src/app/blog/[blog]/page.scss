@@ -10,7 +10,7 @@
 
     .left {
       position: relative;
-      width: 100%;
+      width: 72%;
       max-width: 50rem;
       margin: auto;
       padding: 0 var(--margin-x-page);
@@ -18,7 +18,7 @@
     }
 
     .right {
-      width: 100%;
+      width: 28%;
       max-width: 20rem;
       padding-left: 3rem;
       padding-right: var(--margin-x-page);
@@ -26,8 +26,14 @@
   }
 }
 
-@media (max-width: 70rem) {
-  .blog .blog-content .right {
-    display: none;
+@media (max-width: 54rem) {
+  .blog .blog-content {
+    .left {
+      width: 100%;
+    }
+
+    .right {
+      display: none;
+    }
   }
 }

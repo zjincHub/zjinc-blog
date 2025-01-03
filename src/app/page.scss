@@ -11,13 +11,13 @@
     background: transparent;
 
     .blog-wrapper {
-      width: 100%;
+      width: 65%;
       max-width: 46rem;
       padding: 0 var(--margin-x-page);
     }
 
     .blog-tags-wrapper {
-      width: 100%;
+      width: 35%;
       max-width: 24rem;
       padding: 0 var(--margin-x-page);
       transform: translateY(6rem);
@@ -32,6 +32,19 @@
 
       .tag-box {
         margin: 0 0.625rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 46rem) {
+  .page-main {
+    .page-content {
+      .blog-wrapper {
+        width: 100%;
+      }
+      .blog-tags-wrapper {
+        display: none;
       }
     }
   }

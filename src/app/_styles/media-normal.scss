@@ -1,18 +1,18 @@
 :root {
-   // 页面两边留白
-   --margin-x-page: 1rem;
-   // 文字边距
+  // 页面两边留白
+  --margin-x-page: 1rem;
+  // 文字边距
   --margin-x-text-normal: 1.5rem;
 
   // 主页行间距
-  --line-height-home-page: 1.725rem;
-  
+  --line-height-home-page: 1.75rem;
+
   // 博客文字边距
   --margin-x-text-normal: 1.5rem;
   // 博客文字行高
   --line-height-blog-text: 2rem;
   // 博客字间距
-  --letter-spacing-blog-text: 0.04em;
+  --letter-spacing-blog-text: 0.5px;
   // 博客文字大小
   --font-size-blog-text: 1rem;
   // 博客段落间距
@@ -20,7 +20,7 @@
   // 博客一级标题间距
   --margin-top-blog-h1: 1.5rem;
   // 博客一级标题文字大小
-  --font-size-blog-h1: 1.2rem;
+  --font-size-blog-h1: 1.125rem;
   // 博客标题文字大小
   --font-size-blog-title: 2rem;
   // 博客标题行高
