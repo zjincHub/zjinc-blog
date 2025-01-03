@@ -5,6 +5,7 @@
   margin: 0 auto;
 
   .title-wrapper {
+    margin: 0 var(--margin-x-text-normal);
     display: inline-block;
     font-size: 1.5rem;
     line-height: 2rem;
@@ -13,17 +14,23 @@
     cursor: pointer;
 
     .title-link {
-      color: #4a5568;
+      color: var(--color-text-main);
+    }
+
+    .title-link:hover {
+      text-decoration: underline double 1px var(--color-text-decorate-hover);
+      text-underline-offset: 4px;
     }
   }
 
   .tags-wrapper {
+    margin: 0 var(--margin-x-text-normal);
     margin-top: 0.75rem;
     display: flex;
     align-items: center;
-    color: #776b5d;
     font-weight: bold;
     font-size: 0.875rem;
+    color: var(--color-text-decorate);
 
     .tag-item {
       display: flex;
@@ -39,11 +46,17 @@
   }
 
   .summary-wrapper {
+    margin: 0 var(--margin-x-text-normal);
     margin-top: 0.5rem;
-    color: #4a5568;
     font-size: 1rem;
     line-height: var(--line-height-home-page);
     letter-spacing: 0.05em;
+    color: var(--color-text-main);
+  }
+
+  .foot {
+    margin: 0 var(--margin-x-text-normal);
+    margin-top: 6px;
   }
 }
 

@@ -12,22 +12,26 @@
 
     .blog-wrapper {
       width: 100%;
-      max-width: 880px;
-      padding-left: 3rem;
-      padding-right: 3rem;
+      max-width: 46rem;
+      padding: 0 var(--margin-x-page);
     }
 
     .blog-tags-wrapper {
       width: 100%;
-      max-width: 300px;
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
+      max-width: 24rem;
+      padding: 0 var(--margin-x-page);
       transform: translateY(6rem);
 
       .title {
+        margin: 0 var(--margin-x-text-normal);
+        margin-bottom: 0.5rem;
         font-size: 1rem;
         font-weight: bold;
-        color: #4a5568;
+        color: var(--color-text-decorate);
+      }
+
+      .tag-box {
+        margin: 0 0.625rem;
       }
     }
   }

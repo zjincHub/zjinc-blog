@@ -12,7 +12,7 @@
   transition: 0.2s cubic-bezier(0.19, 1, 0.22, 1);
   font-weight: bold;
   font-size: 14px;
-  color: #374151;
+  color: var(--color-text-main);
   cursor: pointer;
 
   .icon {
@@ -24,7 +24,7 @@
 
 .button-read-more::after {
   content: '';
-  border-bottom: 2px dashed #b6a28e;
+  border-bottom: 2px dashed var(--color-text-decorate-hover);
   width: 0;
   height: 100%;
   position: absolute;

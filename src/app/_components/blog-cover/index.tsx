@@ -20,7 +20,9 @@ export default function Index(props: IProps) {
         ))}
       </div>
       <div className="summary-wrapper">{props.summary}</div>
-      <ButtonReadMore path={props.path} />
+      <div className="foot">
+        <ButtonReadMore path={props.path} />
+      </div>
     </div>
   );
 }

@@ -46,11 +46,14 @@ export default function Index(props: { searchParams: { tags: string } }) {
         </div>
         {/* 博客标签 */}
         <div className="blog-tags-wrapper">
-          <div className="title">分类标签</div>
-          {tagsTotal.map((tag, index) => (
-            <ButtonTag key={index} value={tag} activityTags={tagList} />
-          ))}
+          <div className="title">博客分类标签</div>
+          <div className="tag-box">
+            {tagsTotal.map((tag, index) => (
+              <ButtonTag key={index} value={tag} activityTags={tagList} />
+            ))}
+          </div>
         </div>
+        {/* 博客热门 */}
       </div>
       {/* 页脚 */}
       <PageFooter />

@@ -1,15 +1,24 @@
 :root {
   // 页面主体背景色
   --color-background-main: #ffffff;
+  // 文字选中背景色
+  --color-bg-selection: #ffec8f;
+  // 主字体颜色
+  --color-text-main: #000000;
+  // 点缀字体颜色
+  --color-text-decorate: #e60067;
+  // 点缀字体颜色
+  --color-text-decorate-hover: #4242fa;
+
+  // 主页分类标签背景色
+  --color-bg-tag: #b1dff6;
+
   // 页面头部天空颜色
   --color-sky-main: #ffffff;
   // 页面头部第一层云层颜色
   --color-cloud-amin: #b9d7ea;
   // 页面头部第二层云层颜色
   --color-cloud-secondary: #d6e6f2;
-
-  // 文字选中背景色
-  --color-bg-selection: #ffec8f;
 
   // 博客标题颜色
   --color-blog-title: #262d40;
@@ -19,12 +28,14 @@
   --color-blog-text: #000000;
   // 博客重点文字背景色
   --color-bg-strong-text: #e8f1fc;
-  // 设置按钮背景色
-  --color-bg-setting-btn: #f7fbfc;
-  // 设置按钮文字颜色
-  --color-setting-btn: #495057;
+
   // 博客目录文字颜色
   --color-blog-directory-text: #686d7a;
   // 博客目录文字颜色hover
   --color-blog-directory-text-hover: #262d40;
+
+  // 设置按钮背景色
+  --color-bg-setting-btn: #f7fbfc;
+  // 设置按钮文字颜色
+  --color-setting-btn: #495057;
 }

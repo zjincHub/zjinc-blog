@@ -1,10 +1,14 @@
 :root {
+   // 页面两边留白
+   --margin-x-page: 1rem;
+   // 文字边距
+  --margin-x-text-normal: 1.5rem;
+
   // 主页行间距
   --line-height-home-page: 1.725rem;
-  // 博客页面两边留白
-  --margin-x-blog-page: 1rem;
+  
   // 博客文字边距
-  --margin-x-blog-text: 1.5rem;
+  --margin-x-text-normal: 1.5rem;
   // 博客文字行高
   --line-height-blog-text: 2rem;
   // 博客字间距

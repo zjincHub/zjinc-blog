@@ -1,15 +1,15 @@
 .button-tag {
-  height: 30px;
+  height: 2rem;
+  margin: 12px 12px 0 0;
   padding: 0 10px;
-  margin: 10px 10px 0 0;
+  border: 0;
+  border-radius: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #374151;
-  background: #eeeeee;
-  border: 0;
   font-size: 14px;
-  border-radius: 6px;
+  color: var(--color-text-main);
+  background: var(--color-bg-tag);
   transition: all 0.3s;
   cursor: pointer;
 
