@@ -1,6 +1,7 @@
 :root {
-  // 页面主体背景色
-  --color-background-main: #ffffff;
+  // 页面背景色-header、footer
+  --color-bg-outside: #b4dafb;
+
   // 文字选中背景色
   --color-bg-selection: #ffec8f;
   // 主字体颜色
@@ -14,13 +15,11 @@
 
   // 主页分类标签背景色
   --color-bg-tag: #b1dff6;
+  // 主页背景色-content
+  --color-bg-content: #ffffff;
 
-  // 页面头部天空颜色
-  --color-sky-main: #ffffff;
-  // 页面头部第一层云层颜色
-  --color-cloud-amin: #b9d7ea;
-  // 页面头部第二层云层颜色
-  --color-cloud-secondary: #d6e6f2;
+  // 博客背景色-content
+  --color-bg-blog-content: #ffffff;
 
   // 博客标题颜色
   --color-blog-title: #262d40;

@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import blogComponents from '@blog';
-import PageHeaderCloud from '@/app/_components/page-header-cloud';
-import PageHeaderTitle from '@/app/_components/page-header-title';
+import BlogHeader from '@/app/_components/blog-header';
 import BlogDirectory from '@/app/_components/blog-directory';
 import SettingBlog from '@/app/_components/setting-blog';
 import './page.scss';
@@ -18,8 +17,7 @@ export default function Index(props: IProps) {
   const { component: BlogComponent, ...abstract } = blog;
   return (
     <div className="blog">
-      <PageHeaderCloud />
-      <PageHeaderTitle {...abstract} />
+      <BlogHeader {...abstract} />
       <div className="blog-content">
         <div className="left">
           <BlogComponent />

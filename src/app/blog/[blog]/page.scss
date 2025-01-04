@@ -2,19 +2,16 @@
   .blog-content {
     position: relative;
     width: 100%;
-    max-width: 70rem;
-    margin: auto;
+    padding-bottom: 2rem;
     display: flex;
-    background-color: transparent;
-    z-index: 0;
+    justify-content: center;
+    background-color: var(--color-bg-blog-content);
 
     .left {
       position: relative;
       width: 72%;
       max-width: 50rem;
-      margin: auto;
       padding: 0 var(--margin-x-page);
-      background-color: transparent;
     }
 
     .right {

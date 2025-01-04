@@ -1,14 +1,13 @@
 .page-main {
-  background-color: var(--color-background-main);
+  background-color: var(--color-bg-outside);
 
   .page-content {
     position: relative;
     width: 100%;
-    max-width: 70rem;
-    margin: 0 auto;
+    padding-bottom: 2rem;
     display: flex;
-    z-index: 0;
-    background: transparent;
+    justify-content: center;
+    background: var(--color-bg-content);
 
     .blog-wrapper {
       width: 65%;
@@ -37,7 +36,7 @@
   }
 }
 
-@media (max-width: 46rem) {
+@media (max-width: 54rem) {
   .page-main {
     .page-content {
       .blog-wrapper {

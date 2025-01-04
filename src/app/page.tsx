@@ -1,5 +1,5 @@
 import blogs from '@blog';
-import PageHeaderCloud from './_components/page-header-cloud';
+import PageHeader from './_components/page-header';
 import PageFooter from './_components/page-footer';
 import BlogCover from './_components/blog-cover';
 import ButtonTag from './_components/button-tag';
@@ -28,8 +28,8 @@ export default function Index(props: { searchParams: { tags: string } }) {
 
   return (
     <main className="page-main">
-      {/* 顶部云层 */}
-      <PageHeaderCloud />
+      {/* 顶部天空 */}
+      <PageHeader />
       {/* 首页内容 */}
       <div className="page-content">
         {/* 博客列表 */}
