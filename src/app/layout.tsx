@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './_styles/globals.scss';
@@ -6,9 +5,9 @@ import './_styles/globals.scss';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'ZJINC BLOG',
-  description: "zjinc's blog",
-  keywords: ['blog', 'code', '博客', '编程'],
+  title: 'ZJinC 博客',
+  description: 'ZJinC 博客',
+  keywords: ['博客', '编程', '计算机', '前端', 'React', 'Vue'],
 };
 
 export default function RootLayout({
@@ -35,7 +34,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body className={cn(inter.className, 'dark:bg-slate-900 dark:text-slate-400')}>
+      <body className={inter.className}>
         <div className="min-h-screen">{children}</div>
       </body>
     </html>
