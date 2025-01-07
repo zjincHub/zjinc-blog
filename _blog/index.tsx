@@ -10,15 +10,15 @@ const blogComponentModules = require.context(
 );
 
 // 收集info信息到数组中
-let blogInfos: IBlogInfo[] = [];
+const blogInfos: IBlogInfo[] = [];
 blogInfoModules.keys().forEach((key) => {
   const module: { default: IBlogInfo } = blogInfoModules(key);
   blogInfos.push(module.default);
 });
 
 // 收集mdx页面和path到数组中
-let blogComponents: MDXContent[] = [];
-let blogPaths: string[] = [];
+const blogComponents: MDXContent[] = [];
+const blogPaths: string[] = [];
 blogComponentModules.keys().forEach((key) => {
   const mdxName = key.split('/')[1];
   const module: { default: MDXContent } = blogComponentModules(key);

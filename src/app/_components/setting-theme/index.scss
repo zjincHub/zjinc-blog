@@ -1,20 +1,20 @@
 .setting-theme {
-  width: 15.625rem;
+  width: 15rem;
   height: 10rem;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  scale: 0.3;
+  scale: 0.4;
   cursor: pointer;
 
   .cloud {
-    width: 15.625rem;
+    width: 15rem;
   }
 
   .front {
     position: absolute;
-    margin-left: 1.5rem;
+    margin-left: 2rem;
     padding-top: 2.875rem;
     display: inline;
     z-index: 11;
@@ -28,6 +28,9 @@
       border-radius: 50% 50% 50% 0%;
       display: inline-block;
       background-color: #4c9beb;
+      box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.1),
+        0 0 6px rgba(0, 0, 0, 0.05);
       z-index: 5;
     }
 
@@ -37,35 +40,44 @@
       display: inline-block;
       border-radius: 50% 50% 0% 50%;
       background-color: #4c9beb;
+      box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.2),
+        0 0 6px rgba(0, 0, 0, 0.1);
       z-index: 5;
     }
   }
 
   .back {
     margin-top: -1.875rem;
-    margin-left: 9.375rem;
+    margin-left: 8.5rem;
     z-index: 12;
     animation: clouds 12s infinite;
     animation-timing-function: ease-in-out;
-  }
 
-  .right-back {
-    width: 3.125rem;
-    height: 3.125rem;
-    margin-left: -1.25rem;
-    border-radius: 50% 50% 50% 0%;
-    display: inline-block;
-    background-color: #4c9beb;
-    z-index: 5;
-  }
+    .right-back {
+      width: 3.125rem;
+      height: 3.125rem;
+      margin-left: -1.25rem;
+      border-radius: 50% 50% 50% 0%;
+      display: inline-block;
+      background-color: #4c9beb;
+      box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.1),
+        0 0 6px rgba(0, 0, 0, 0.05);
+      z-index: 5;
+    }
 
-  .left-back {
-    width: 1.875rem;
-    height: 1.875rem;
-    border-radius: 50% 50% 0% 50%;
-    display: inline-block;
-    background-color: #4c9beb;
-    z-index: 5;
+    .left-back {
+      width: 1.875rem;
+      height: 1.875rem;
+      border-radius: 50% 50% 0% 50%;
+      display: inline-block;
+      background-color: #4c9beb;
+      box-shadow:
+        0 0 20px rgba(0, 0, 0, 0.2),
+        0 0 6px rgba(0, 0, 0, 0.1);
+      z-index: 5;
+    }
   }
 
   .sun {
@@ -76,6 +88,9 @@
     border-radius: 3.75rem;
     display: inline;
     position: absolute;
+    box-shadow:
+      0 0 20px rgba(252, 187, 4, 0.4),
+      0 0 6px rgba(252, 187, 4, 0.2);
   }
 
   .sunshine {
