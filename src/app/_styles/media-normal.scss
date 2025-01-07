@@ -1,28 +1,30 @@
 :root {
-  // 页面两边留白
+  // 通用-页面左右边距
   --margin-x-page: 1rem;
-  // 文字边距
+  // 通用-文字左右边距
   --margin-x-text-normal: 1.5rem;
 
-  // 主页行间距
-  --line-height-home-page: 1.75rem;
-
-  // 博客文字边距
-  --margin-x-text-normal: 1.5rem;
-  // 博客文字行高
-  --line-height-blog-text: 2rem;
-  // 博客字间距
-  --letter-spacing-blog-text: 0.5px;
-  // 博客文字大小
+  // 博客-文字大小-通用
   --font-size-blog-text: 1rem;
-  // 博客段落间距
-  --margin-top-blog-p: 1rem;
-  // 博客一级标题间距
-  --margin-top-blog-h1: 1.5rem;
-  // 博客一级标题文字大小
-  --font-size-blog-h1: 1.125rem;
-  // 博客标题文字大小
+  // 博客-文字大小-title
   --font-size-blog-title: 2rem;
-  // 博客标题行高
+  // 博客-文字大小-h1
+  --font-size-blog-h1: 1.125rem;
+  // 博客-文字大小-h2
+  --font-size-blog-h2: 1rem;
+
+  // 博客-行高-通用
+  --line-height-blog-text: 2rem;
+  // 博客-行高-title
   --line-height-blog-title: 3rem;
+
+  // 博客-子间隔-通用
+  --letter-spacing-blog-text: 0.5px;
+
+  // 博客-行间距-h1
+  --margin-top-blog-h1: 1.5rem;
+  // 博客-行间距-h2
+  --margin-top-blog-h2: 1.5rem;
+  // 博客-行间距-p
+  --margin-top-blog-p: 1rem;
 }

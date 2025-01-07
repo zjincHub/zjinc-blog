@@ -1,6 +1,8 @@
 .h2 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.875rem;
-  color: #075985;
+  margin-top: var(--margin-top-blog-h2);
+  margin-bottom: var(--margin-top-blog-p);
+  margin-left: var(--margin-x-text-normal);
+  font-size: var(--font-size-blog-h2);
+  letter-spacing: var(--letter-spacing-blog-text);
+  color: var(--color-blog-h1);
 }

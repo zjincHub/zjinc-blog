@@ -1,10 +1,63 @@
 [data-theme='dark'] {
-  // 页面主体背景色
-  --color-bg-outside: #000000;
-  // 页面头部天空颜色
-  --color-sky-main: #f7fbfc;
-  // 页面头部第一层云层颜色
-  --color-cloud-amin: #b9d7ea;
-  // 页面头部第二层云层颜色
-  --color-cloud-secondary: #d6e6f2;
+  // ########### 背景色 ###########
+
+  // ----------- 通用 -----------
+
+  // 文字选中
+  --color-bg-selection: #393848;
+
+  // header、footer
+  --color-bg-outside: #121d2b;
+
+  // 中间内容部分
+  --color-bg-content: #000000;
+
+  // ----------- 主页 -----------
+
+  // 右侧分类标签
+  --color-bg-tag: #b1dff6;
+
+  // ----------- 博客 -----------
+
+  // 重要文字
+  --color-bg-strong-text: #1a1f23;
+
+  // 设置按钮
+  --color-bg-setting-btn: #f7fbfc;
+
+  // ########### 文字颜色 ###########
+
+  // ----------- 通用 -----------
+
+  // 普通文字
+  --color-text-main: #e3e6e8;
+
+  // 次要文字
+  --color-text-secondary: #6c7693;
+
+  // 点缀文字
+  --color-text-decorate: #e60067;
+
+  // 文字hover下横线
+  --color-text-hover: #4242fa;
+
+  // 设置按钮文字
+  --color-setting-btn: #495057;
+
+  // ----------- 博客 -----------
+
+  // 普通文字
+  --color-blog-text: #e3e6e8;
+
+  // title
+  --color-blog-title: #e3e6e8;
+
+  // h1
+  --color-blog-h1: #262d40;
+
+  // 目录
+  --color-blog-directory-text: #9ca1a8;
+
+  // 目录hover
+  --color-blog-directory-text-hover: #e3e6e8;
 }

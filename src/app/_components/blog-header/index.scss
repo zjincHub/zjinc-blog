@@ -1,7 +1,11 @@
 .blog-header {
   position: relative;
   height: 26rem;
-  background: linear-gradient(to bottom, var(--color-bg-outside), #ffffff);
+  background: linear-gradient(
+    to bottom,
+    var(--color-bg-outside),
+    var(--color-bg-content)
+  );
 
   .content-wrapper {
     position: absolute;

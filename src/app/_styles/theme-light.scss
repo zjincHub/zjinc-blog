@@ -1,42 +1,63 @@
 :root {
-  // 页面背景色-header、footer
+  // ########### 背景色 ###########
+
+  // ----------- 通用 -----------
+
+  // 文字选中
+  --color-bg-selection: #ffec8f;
+
+  // header、footer
   --color-bg-outside: #b4dafb;
 
-  // 文字选中背景色
-  --color-bg-selection: #ffec8f;
-  // 主字体颜色
-  --color-text-main: #000000;
-  // 次要字体颜色
-  --color-text-secondary: #6c7693;
-  // 点缀字体颜色
-  --color-text-decorate: #e60067;
-  // hover字体颜色
-  --color-text-hover: #4242fa;
-
-  // 主页分类标签背景色
-  --color-bg-tag: #b1dff6;
-  // 主页背景色-content
+  // 中间内容部分
   --color-bg-content: #ffffff;
 
-  // 博客背景色-content
-  --color-bg-blog-content: #ffffff;
+  // ----------- 主页 -----------
 
-  // 博客标题颜色
-  --color-blog-title: #262d40;
-  // 博客一级标题颜色
-  --color-blog-h1: #262d40;
-  // 博客文字颜色
-  --color-blog-text: #000000;
-  // 博客重点文字背景色
+  // 右侧分类标签
+  --color-bg-tag: #b1dff6;
+
+  // ----------- 博客 -----------
+
+  // 重要文字
   --color-bg-strong-text: #e8f1fc;
 
-  // 博客目录文字颜色
-  --color-blog-directory-text: #686d7a;
-  // 博客目录文字颜色hover
-  --color-blog-directory-text-hover: #262d40;
-
-  // 设置按钮背景色
+  // 设置按钮
   --color-bg-setting-btn: #f7fbfc;
-  // 设置按钮文字颜色
+
+  // ########### 文字颜色 ###########
+
+  // ----------- 通用 -----------
+
+  // 普通文字
+  --color-text-main: #000000;
+
+  // 次要文字
+  --color-text-secondary: #6c7693;
+
+  // 点缀文字
+  --color-text-decorate: #e60067;
+
+  // 文字hover下横线
+  --color-text-hover: #4242fa;
+
+  // 设置按钮文字
   --color-setting-btn: #495057;
+
+  // ----------- 博客 -----------
+
+  // 普通文字
+  --color-blog-text: #000000;
+
+  // title
+  --color-blog-title: #262d40;
+
+  // h1
+  --color-blog-h1: #262d40;
+
+  // 目录
+  --color-blog-directory-text: #686d7a;
+
+  // 目录hover
+  --color-blog-directory-text-hover: #262d40;
 }
