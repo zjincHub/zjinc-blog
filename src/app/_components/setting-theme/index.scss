@@ -1,82 +1,110 @@
 .setting-theme {
-  width: 40px;
-  height: 40px;
-  margin: 0;
-  padding: 0;
+  width: 15.625rem;
+  height: 10rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-bg-setting-btn);
-  border-radius: 50%;
-  border: none;
+  scale: 0.3;
   cursor: pointer;
-  box-shadow:
-    0 6px 16px 0 rgba(0, 0, 0, 0.08),
-    0 3px 6px -4px rgba(0, 0, 0, 0.12),
-    0 9px 28px 8px rgba(0, 0, 0, 0.05);
-}
 
-.setting-theme .main-circle {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background-color: var(--color-setting-btn);
-  border-radius: 50%;
-  transition: transform 0.4s ease 0.2s;
-}
+  .cloud {
+    width: 15.625rem;
+  }
 
-.setting-theme .main-circle::after {
-  content: '';
-  position: absolute;
-  top: 1px;
-  right: -1px;
-  width: 8px;
-  height: 8px;
-  background-color: var(--color-bg-setting-btn);
-  border-radius: 50%;
-  transform-origin: right top;
-  transform: scale(0);
-  transition: transform 0.4s ease 0.2s;
-}
+  .front {
+    position: absolute;
+    margin-left: 1.5rem;
+    padding-top: 2.875rem;
+    display: inline;
+    z-index: 11;
+    animation: clouds 8s infinite;
+    animation-timing-function: ease-in-out;
 
-.setting-theme .sun-rays {
-  display: grid;
-  place-items: center;
-  transition: transform 0.4s ease 0.2s;
-}
+    .right-front {
+      width: 2.875rem;
+      height: 2.875rem;
+      margin-left: -1.5rem;
+      border-radius: 50% 50% 50% 0%;
+      display: inline-block;
+      background-color: #4c9beb;
+      z-index: 5;
+    }
 
-.setting-theme .sun-rays,
-.setting-theme .sun-rays::after,
-.setting-theme .sun-rays::before {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  background-color: var(--color-setting-btn);
-  box-shadow:
-    0 10px 0 var(--color-setting-btn),
-    0 -10px 0 var(--color-setting-btn);
-  border-radius: 50%;
-}
+    .left-front {
+      width: 4rem;
+      height: 4rem;
+      display: inline-block;
+      border-radius: 50% 50% 0% 50%;
+      background-color: #4c9beb;
+      z-index: 5;
+    }
+  }
 
-.setting-theme .sun-rays::after {
-  content: '';
-  transform: rotate(120deg);
-}
+  .back {
+    margin-top: -1.875rem;
+    margin-left: 9.375rem;
+    z-index: 12;
+    animation: clouds 12s infinite;
+    animation-timing-function: ease-in-out;
+  }
 
-.setting-theme .sun-rays::before {
-  content: '';
-  transform: rotate(240deg);
-}
+  .right-back {
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-left: -1.25rem;
+    border-radius: 50% 50% 50% 0%;
+    display: inline-block;
+    background-color: #4c9beb;
+    z-index: 5;
+  }
 
-.setting-theme-dark .main-circle {
-  transform: scale(1.4);
-}
+  .left-back {
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50% 50% 0% 50%;
+    display: inline-block;
+    background-color: #4c9beb;
+    z-index: 5;
+  }
 
-.setting-theme-dark .main-circle::after {
-  transform: scale(1);
-}
+  .sun {
+    width: 7.5rem;
+    height: 7.5rem;
+    background: -webkit-linear-gradient(to right, #fcbb04, #fffc00);
+    background: linear-gradient(to right, #fcbb04, #fffc00);
+    border-radius: 3.75rem;
+    display: inline;
+    position: absolute;
+  }
 
-.setting-theme-dark .sun-rays {
-  transition: transform 0.4s;
-  transform: scale(0);
+  .sunshine {
+    animation: sunshines 2s infinite;
+  }
+
+  @keyframes sunshines {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+
+    100% {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  @keyframes clouds {
+    0% {
+      transform: translateX(1rem);
+    }
+
+    50% {
+      transform: translateX(0rem);
+    }
+
+    100% {
+      transform: translateX(1rem);
+    }
+  }
 }

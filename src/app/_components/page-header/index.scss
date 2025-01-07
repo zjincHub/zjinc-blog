@@ -32,8 +32,8 @@
 
         h1 {
           font-size: 4rem;
-          color: #0798ff;
-          text-shadow: 1px 1px #000000;
+          color: var(--color-home-title);
+          text-shadow: 1px 1px var(--color-home-title-shadow);
         }
       }
 
@@ -41,6 +41,12 @@
         position: relative;
         width: 35%;
         max-width: 24rem;
+
+        .button-theme {
+          position: absolute;
+          top: -4rem;
+          left: 8rem;
+        }
 
         img {
           position: absolute;

@@ -2,7 +2,6 @@ import { notFound } from 'next/navigation';
 import blogComponents from '@blog';
 import BlogHeader from '@/app/_components/blog-header';
 import BlogDirectory from '@/app/_components/blog-directory';
-import SettingBlog from '@/app/_components/setting-blog';
 import PageFooter from '@/app/_components/page-footer';
 import './page.scss';
 
@@ -30,7 +29,6 @@ export default function Index(props: IProps) {
           <BlogDirectory mdxContent={BlogComponent} />
         </div>
       </div>
-      <SettingBlog />
       {/* 页脚 */}
       <PageFooter />
     </div>

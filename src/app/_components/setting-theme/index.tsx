@@ -1,22 +1,33 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import './index.scss';
 
-export default function Index(props: {
-  value: boolean;
-  className?: string;
-  onClick: (value: boolean) => void;
-}) {
+export default function Index(props: { className?: string }) {
+  const [isLight, setIsLight] = useState(true);
+
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      'data-theme',
+      isLight ? 'light' : 'dark'
+    );
+  }, [isLight]);
+
   return (
-    <button
-      className={classNames('setting-theme', props.className, {
-        'setting-theme-dark': props.value,
-      })}
-      onClick={() => props.onClick(!props.value)}
-    >
-      <div className="sun-rays"></div>
-      <div className="main-circle"></div>
-    </button>
+    <div
+      className={classNames('setting-theme', props.className)}
+      onClick={() => setIsLight(!isLight)}>
+      <div className="cloud front">
+        <span className="left-front"></span>
+        <span className="right-front"></span>
+      </div>
+      <span className="sun sunshine"></span>
+      <span className="sun"></span>
+      <div className="cloud back">
+        <span className="left-back"></span>
+        <span className="right-back"></span>
+      </div>
+    </div>
   );
 }
