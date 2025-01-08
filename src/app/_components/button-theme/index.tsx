@@ -16,7 +16,7 @@ export default function Index(props: { className?: string }) {
 
   return (
     <div
-      className={classNames('setting-theme', props.className)}
+      className={classNames('button-theme', props.className)}
       onClick={() => setIsLight(!isLight)}>
       <div className="cloud front">
         <span className="left-front"></span>

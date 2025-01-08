@@ -1,20 +1,18 @@
 import Image from 'next/image';
-import localFont from 'next/font/local';
-import SettingTheme from '../setting-theme';
+import ButtonTheme from '../button-theme';
+import { pixel } from '@/utils/fonts';
 import './index.scss';
-
-const pixel = localFont({ src: '../../../../public/fonts/pixel.ttf' });
 
 export default function Index() {
   return (
-    <div className="page-header">
+    <div className="header">
       <div className="content-wrapper">
         <div className="content-box">
           <div className="left">
             <h1 className={pixel.className}>探索、思考、分享</h1>
           </div>
           <div className="right">
-            <SettingTheme className="button-theme" />
+            <ButtonTheme className="setting-theme" />
             <Image src="/images/cat.png" alt="cat" width={220} height={220} />
           </div>
         </div>

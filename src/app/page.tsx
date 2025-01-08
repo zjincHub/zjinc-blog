@@ -1,6 +1,6 @@
 import blogs from '@blog';
-import PageHeader from './_components/page-header';
-import PageFooter from './_components/page-footer';
+import Header from './_components/header';
+import Footer from './_components/footer';
 import BlogCover from './_components/blog-cover';
 import ButtonTag from './_components/button-tag';
 import { chineseDateToDate } from '@/utils/time';
@@ -29,7 +29,7 @@ export default function Index(props: { searchParams: { tags: string } }) {
   return (
     <main className="page-main">
       {/* 顶部天空 */}
-      <PageHeader />
+      <Header />
       {/* 首页内容 */}
       <div className="page-content">
         {/* 博客列表 */}
@@ -56,7 +56,7 @@ export default function Index(props: { searchParams: { tags: string } }) {
         {/* 博客热门 */}
       </div>
       {/* 页脚 */}
-      <PageFooter />
+      <Footer />
     </main>
   );
 }

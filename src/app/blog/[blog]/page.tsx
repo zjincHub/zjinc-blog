@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation';
 import blogComponents from '@blog';
-import BlogHeader from '@/app/_components/blog-header';
-import BlogDirectory from '@/app/_components/blog-directory';
-import PageFooter from '@/app/_components/page-footer';
+import BlogHeader from '@/app/blog/_components/blog-header';
+import BlogDirectory from '@/app/blog/_components/blog-directory';
+import Footer from '@/app/_components/footer';
 import './page.scss';
 
 /**
@@ -30,7 +30,7 @@ export default function Index(props: IProps) {
         </div>
       </div>
       {/* 页脚 */}
-      <PageFooter />
+      <Footer />
     </div>
   );
 }
