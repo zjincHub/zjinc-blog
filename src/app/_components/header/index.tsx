@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import ButtonTheme from '../button-theme';
 import { pixel } from '@/utils/fonts';
 import './index.scss';
 
@@ -12,7 +11,6 @@ export default function Index() {
             <h1 className={pixel.className}>探索、思考、分享</h1>
           </div>
           <div className="right">
-            <ButtonTheme className="setting-theme" />
             <Image src="/images/cat.png" alt="cat" width={220} height={220} />
           </div>
         </div>

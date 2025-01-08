@@ -3,6 +3,7 @@ import Header from './_components/header';
 import Footer from './_components/footer';
 import BlogCover from './_components/blog-cover';
 import ButtonTag from './_components/button-tag';
+import ButtonTheme from './_components/button-theme';
 import { chineseDateToDate } from '@/utils/time';
 import './page.scss';
 
@@ -30,6 +31,8 @@ export default function Index(props: { searchParams: { tags: string } }) {
     <main className="page-main">
       {/* 顶部天空 */}
       <Header />
+      {/* 顶部太阳/月亮 */}
+      <ButtonTheme className="setting-theme" />
       {/* 首页内容 */}
       <div className="page-content">
         {/* 博客列表 */}

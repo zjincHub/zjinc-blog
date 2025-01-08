@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import classNames from 'classnames';
-import ButtonTheme from '@/app/_components/button-theme';
 import { pixel } from '@/utils/fonts';
 import './index.scss';
 
@@ -17,7 +16,6 @@ export default function Index(props: IProps) {
             </h3>
           </div>
           <div className="right">
-            <ButtonTheme className="setting-theme" />
             <Image src="/images/cat.png" alt="cat" width={220} height={220} />
           </div>
         </div>

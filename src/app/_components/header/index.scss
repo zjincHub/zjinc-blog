@@ -42,12 +42,6 @@
         width: 35%;
         max-width: 24rem;
 
-        .setting-theme {
-          position: absolute;
-          top: -4rem;
-          left: 8rem;
-        }
-
         img {
           position: absolute;
           top: 5rem;
@@ -58,7 +52,7 @@
 }
 
 @media (max-width: 54rem) {
-  .page-header .content-wrapper .content-box {
+  .header .content-wrapper .content-box {
     .left {
       width: 100%;
     }

@@ -1,6 +1,12 @@
 .page-main {
   background-color: var(--color-bg-outside);
 
+  .setting-theme {
+    position: absolute;
+    top: -6rem;
+    left: -9rem;
+  }
+
   .page-content {
     position: relative;
     width: 100%;

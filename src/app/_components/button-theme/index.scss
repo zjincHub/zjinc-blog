@@ -1,11 +1,10 @@
 .button-theme {
-  width: 15rem;
-  height: 10rem;
+  width: 20rem;
+  height: 15rem;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  scale: 0.4;
   cursor: pointer;
 
   .cloud {
@@ -14,16 +13,16 @@
 
   .front {
     position: absolute;
-    margin-left: 2rem;
-    padding-top: 2.875rem;
+    margin-left: 11rem;
+    padding-top: 8rem;
     display: inline;
     z-index: 11;
     animation: clouds 8s infinite;
     animation-timing-function: ease-in-out;
 
     .right-front {
-      width: 2.875rem;
-      height: 2.875rem;
+      width: 2.5rem;
+      height: 2.5rem;
       margin-left: -1.5rem;
       border-radius: 50% 50% 50% 0%;
       display: inline-block;
@@ -35,8 +34,8 @@
     }
 
     .left-front {
-      width: 4rem;
-      height: 4rem;
+      width: 3.25rem;
+      height: 3.25rem;
       display: inline-block;
       border-radius: 50% 50% 0% 50%;
       background-color: #4c9beb;
@@ -48,28 +47,28 @@
   }
 
   .back {
-    margin-top: -1.875rem;
-    margin-left: 8.5rem;
+    margin-top: -1rem;
+    margin-left: 11.5rem;
     z-index: 12;
     animation: clouds 12s infinite;
     animation-timing-function: ease-in-out;
 
     .right-back {
-      width: 3.125rem;
-      height: 3.125rem;
-      margin-left: -1.25rem;
+      width: 2.25rem;
+      height: 2.25rem;
+      margin-left: -0.875rem;
       border-radius: 50% 50% 50% 0%;
       display: inline-block;
       background-color: #4c9beb;
       box-shadow:
         0 0 20px rgba(0, 0, 0, 0.1),
-        0 0 6px rgba(0, 0, 0, 0.05);
+        0 0 6px rgba(0, 0, 0, 0.1);
       z-index: 5;
     }
 
     .left-back {
-      width: 1.875rem;
-      height: 1.875rem;
+      width: 1.5rem;
+      height: 1.5rem;
       border-radius: 50% 50% 0% 50%;
       display: inline-block;
       background-color: #4c9beb;
@@ -81,32 +80,15 @@
   }
 
   .sun {
-    width: 7.5rem;
-    height: 7.5rem;
-    background: -webkit-linear-gradient(to right, #fcbb04, #fffc00);
-    background: linear-gradient(to right, #fcbb04, #fffc00);
-    border-radius: 3.75rem;
+    width: 9rem;
+    height: 9rem;
+    background: #ffd662;
+    border-radius: 50%;
     display: inline;
     position: absolute;
     box-shadow:
-      0 0 20px rgba(252, 187, 4, 0.4),
-      0 0 6px rgba(252, 187, 4, 0.2);
-  }
-
-  .sunshine {
-    animation: sunshines 2s infinite;
-  }
-
-  @keyframes sunshines {
-    0% {
-      transform: scale(1);
-      opacity: 0.6;
-    }
-
-    100% {
-      transform: scale(1.8);
-      opacity: 0;
-    }
+      0 4px 6px rgba(0, 0, 0, 0.1),
+      0 1px 3px rgba(0, 0, 0, 0.06);
   }
 
   @keyframes clouds {
