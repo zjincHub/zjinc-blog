@@ -1,16 +1,27 @@
 .button-tag {
+  // 背景色
+  --color-bg-tag: #b1dff6;
+  // 背景色-激活
+  --color-bg-tag-active: #4b5563;
+  // 边框色
+  --color-border-tag: #b1dff6;
+  // 边框色-激活
+  --color-border-tag-active: #4b5563;
+  // 文字颜色-激活
+  --color-tag-active: #ffffff;
+
+  position: relative;
   height: 2rem;
-  margin: 12px 12px 0 0;
+  line-height: 2rem;
+  margin: 0.75rem 0.75rem 0 0;
   padding: 0 10px;
   border: 0;
-  border-radius: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--color-text-main);
-  background: var(--color-bg-tag);
-  transition: all 0.3s;
+  background: transparent;
   cursor: pointer;
 
   .icon {
@@ -18,13 +29,49 @@
     height: 0.75rem;
     stroke-width: 2;
   }
-}
 
-.button-tag-active {
-  color: #ffffff;
-  background-color: #4b5563;
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    outline: 1px solid var(--color-border-tag);
+    background: var(--color-bg-tag);
+    transition: all 0.2s;
+    z-index: -1;
+  }
+
+  .text {
+    margin-left: 2px;
+  }
 }
 
 .button-tag:hover {
-  transform: scale(1.1);
+  .background {
+    transform: scale(1.06);
+  }
+}
+
+.button-tag-active {
+  color: var(--color-tag-active);
+
+  .background {
+    background-color: var(--color-bg-tag-active);
+    outline: 1px solid var(--color-border-tag-active);
+  }
+}
+
+[data-theme='dark'] {
+  .button-tag {
+    // 背景色
+    --color-bg-tag: #0d0f12;
+    // 背景色-激活
+    --color-bg-tag-active: #333333;
+    // 边框色
+    --color-border-tag: #444444;
+    // 边框色-激活
+    --color-border-tag-active: #333333;
+    // 文字颜色-激活
+    --color-tag-active: #e3e6e8;
+  }
 }

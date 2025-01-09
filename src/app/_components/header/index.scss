@@ -62,3 +62,11 @@
     }
   }
 }
+
+[data-theme='dark'] {
+  .header .content-wrapper .content-box {
+    .right img {
+      filter: brightness(50%) contrast(1.5);
+    }
+  }
+}

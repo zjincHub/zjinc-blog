@@ -2,6 +2,7 @@
 import classNames from 'classnames';
 import { useRouter } from 'next/navigation';
 import { Hash } from 'lucide-react';
+import { circle } from '@/utils/fonts';
 import './index.scss';
 
 export default function Index(props: IProps) {
@@ -24,11 +25,15 @@ export default function Index(props: IProps) {
   };
   return (
     <button
-      className={classNames('button-tag', isActive && 'button-tag-active')}
-      onClick={onClickTag}
-    >
+      className={classNames(
+        'button-tag',
+        circle.className,
+        isActive && 'button-tag-active'
+      )}
+      onClick={onClickTag}>
+      <div className="background" />
       <Hash className="icon" />
-      {value}
+      <div className="text">{value}</div>
     </button>
   );
 }
