@@ -1,24 +1,21 @@
 .button-theme {
+  position: relative;
   width: 20rem;
   height: 15rem;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-
-  .cloud {
-    width: 15rem;
-  }
 
   .front {
     position: absolute;
-    margin-left: 11rem;
-    padding-top: 8rem;
+    left: 8rem;
+    top: 10rem;
     display: inline;
-    z-index: 11;
+    z-index: 10;
     animation: clouds 8s infinite;
     animation-timing-function: ease-in-out;
+    cursor: pointer;
 
     .right-front {
       width: 2.5rem;
@@ -47,11 +44,13 @@
   }
 
   .back {
-    margin-top: -1rem;
-    margin-left: 11.5rem;
-    z-index: 12;
+    position: absolute;
+    left: 13rem;
+    top: 6rem;
+    z-index: 10;
     animation: clouds 12s infinite;
     animation-timing-function: ease-in-out;
+    cursor: pointer;
 
     .right-back {
       width: 2.25rem;
@@ -89,6 +88,7 @@
     box-shadow:
       0 4px 6px rgba(0, 0, 0, 0.1),
       0 1px 3px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
   }
 
   @keyframes clouds {

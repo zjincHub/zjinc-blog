@@ -21,6 +21,7 @@
   justify-content: center;
   font-size: 0.875rem;
   color: var(--color-text-main);
+  transition: all var(--time-transition-theme);
   background: transparent;
   cursor: pointer;
 
@@ -37,7 +38,7 @@
     border-radius: 0.5rem;
     outline: 1px solid var(--color-border-tag);
     background: var(--color-bg-tag);
-    transition: all 0.2s;
+    transition: all var(--time-transition-theme);
     z-index: -1;
   }
 

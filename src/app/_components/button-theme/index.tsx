@@ -15,16 +15,14 @@ export default function Index(props: { className?: string }) {
   }, [isLight]);
 
   return (
-    <div
-      className={classNames('button-theme', props.className)}
-      onClick={() => setIsLight(!isLight)}>
-      <div className="cloud front">
+    <div className={classNames('button-theme', props.className)}>
+      <div className="cloud front" onClick={() => setIsLight(!isLight)}>
         <span className="left-front"></span>
         <span className="right-front"></span>
       </div>
       <span className="sun sunshine"></span>
-      <span className="sun"></span>
-      <div className="cloud back">
+      <span className="sun" onClick={() => setIsLight(!isLight)}></span>
+      <div className="cloud back" onClick={() => setIsLight(!isLight)}>
         <span className="left-back"></span>
         <span className="right-back"></span>
       </div>
