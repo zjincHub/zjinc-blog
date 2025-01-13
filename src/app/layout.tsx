@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import FontLoader from './_components/font-loader';
 import './_styles/globals.scss';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'ZJinC 博客',
-  description: 'ZJinC 博客',
+  title: 'ZJINC 博客',
+  description: 'ZJINC 博客',
   keywords: ['博客', '编程', '计算机', '前端', 'React', 'Vue'],
 };
 
@@ -35,7 +36,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
       <body className={inter.className}>
-        <div className="min-h-screen">{children}</div>
+        <FontLoader>{children}</FontLoader>
       </body>
     </html>
   );

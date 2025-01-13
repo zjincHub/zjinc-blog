@@ -38,7 +38,9 @@
     border-radius: 0.5rem;
     outline: 1px solid var(--color-border-tag);
     background: var(--color-bg-tag);
-    transition: all var(--time-transition-theme);
+    transition:
+      all var(--time-transition-theme),
+      transform 0.2s ease-in-out;
     z-index: -1;
   }
 

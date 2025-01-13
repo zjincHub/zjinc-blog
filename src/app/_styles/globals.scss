@@ -9,6 +9,8 @@
 /* prettier-ignore */
 *, *::before, *::after {
   box-sizing: border-box;
+  // 去掉手机端点击时元素出现蓝色区域高亮
+  -webkit-tap-highlight-color: transparent;
 }
 
 * {
