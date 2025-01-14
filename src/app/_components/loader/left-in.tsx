@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 export default function Index({
   children,
-  transitionTime = 0.6,
+  transitionTime = 0.3,
   transitionDelay = 0,
   className,
 }: Props) {

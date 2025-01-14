@@ -1,5 +1,3 @@
-import classNames from 'classnames';
-import { circle } from '@/utils/fonts';
 import './index.scss';
 
 export default function Index() {
@@ -64,7 +62,7 @@ export default function Index() {
         />
       </svg>
       <div className="content">
-        <div className={classNames('record-filing', circle.className)}>
+        <div className="record-filing">
           <a href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">
             浙ICP备2024101491号
           </a>

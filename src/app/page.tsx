@@ -4,8 +4,9 @@ import Footer from './_components/footer';
 import BlogCover from './_components/blog-cover';
 import ButtonTag from './_components/button-tag';
 import ButtonTheme from './_components/button-theme';
-import LoaderFontRightIn from './_components/loader-font/right-in';
+import LoaderRightIn from './_components/loader/right-in';
 import LoaderLeftIn from './_components/loader/left-in';
+import LoaderCenterIn from './_components/loader/center-in';
 import { chineseDateToDate } from '@/utils/time';
 import './page.scss';
 
@@ -34,17 +35,13 @@ export default function Index(props: { searchParams: { tags: string } }) {
       {/* 顶部天空 */}
       <Header />
       {/* 顶部太阳/月亮 */}
-      <LoaderLeftIn
-        transitionTime={2}
-        transitionDelay={1}
-        className="setting-theme"
-      >
+      <LoaderLeftIn transitionTime={1} className="setting-theme">
         <ButtonTheme />
       </LoaderLeftIn>
       {/* 首页内容 */}
       <div className="page-content">
         {/* 博客列表 */}
-        <div className="blog-wrapper">
+        <LoaderCenterIn className="blog-wrapper">
           {filterBlogs.map((item) => (
             <BlogCover
               key={item.path}
@@ -54,21 +51,21 @@ export default function Index(props: { searchParams: { tags: string } }) {
               path={item.path}
             />
           ))}
-        </div>
+        </LoaderCenterIn>
         {/* 博客标签 */}
         <div className="blog-tags-wrapper">
-          <LoaderFontRightIn>
+          <LoaderRightIn>
             <div className="title">博客分类标签</div>
-          </LoaderFontRightIn>
+          </LoaderRightIn>
           <div className="tag-box">
             {tagsTotal.map((tag, index) => (
-              <LoaderFontRightIn
+              <LoaderRightIn
                 key={index}
                 transitionDelay={index * 0.1}
                 className="button-tag-right-in"
               >
                 <ButtonTag value={tag} activityTags={tagList} />
-              </LoaderFontRightIn>
+              </LoaderRightIn>
             ))}
           </div>
         </div>

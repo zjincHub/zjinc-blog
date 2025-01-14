@@ -1,24 +1,16 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import ImageNext from 'next/image';
+import { useState } from 'react';
 
 export default function Index({
   src,
   height,
   width,
-  transitionTime = 0.6,
+  transitionTime = 0.3,
   className,
 }: Props) {
   const [imageLoaded, setImageLoaded] = useState(false);
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      setImageLoaded(true);
-    };
-  }, [src]);
 
   return (
     <div
@@ -28,7 +20,13 @@ export default function Index({
         transition: `opacity ${transitionTime}s ease-in`,
       }}
     >
-      <ImageNext src={src} alt="" width={width} height={height} />
+      <ImageNext
+        src={src}
+        alt=""
+        width={width}
+        height={height}
+        onLoad={() => setImageLoaded(true)}
+      />
     </div>
   );
 }

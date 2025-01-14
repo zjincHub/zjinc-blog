@@ -4,25 +4,21 @@ import { useEffect, useState } from 'react';
 
 export default function Index({
   children,
-  transitionTime = 0.6,
-  transitionDelay = 0,
+  transitionTime = 0.3,
   className,
 }: Props) {
-  const [fontsLoaded, setFontsLoaded] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    document.fonts.ready.then(() => {
-      setFontsLoaded(true);
-    });
+    setLoaded(true);
   }, []);
 
   return (
     <div
       className={className}
       style={{
-        opacity: fontsLoaded ? 1 : 0,
-        transform: fontsLoaded ? 'translateX(0)' : 'translateX(2rem)',
-        transition: `all ${transitionTime}s ease ${transitionDelay}s`,
+        opacity: loaded ? 1 : 0,
+        transition: `opacity ${transitionTime}s ease-in`,
       }}
     >
       {children}
@@ -33,6 +29,5 @@ export default function Index({
 interface Props {
   children: React.ReactNode;
   transitionTime?: number;
-  transitionDelay?: number;
   className?: string;
 }
