@@ -4,6 +4,8 @@ import Footer from './_components/footer';
 import BlogCover from './_components/blog-cover';
 import ButtonTag from './_components/button-tag';
 import ButtonTheme from './_components/button-theme';
+import LoaderFontRightIn from './_components/loader-font/right-in';
+import LoaderLeftIn from './_components/loader/left-in';
 import { chineseDateToDate } from '@/utils/time';
 import './page.scss';
 
@@ -32,7 +34,13 @@ export default function Index(props: { searchParams: { tags: string } }) {
       {/* 顶部天空 */}
       <Header />
       {/* 顶部太阳/月亮 */}
-      <ButtonTheme className="setting-theme" />
+      <LoaderLeftIn
+        transitionTime={2}
+        transitionDelay={1}
+        className="setting-theme"
+      >
+        <ButtonTheme />
+      </LoaderLeftIn>
       {/* 首页内容 */}
       <div className="page-content">
         {/* 博客列表 */}
@@ -49,10 +57,18 @@ export default function Index(props: { searchParams: { tags: string } }) {
         </div>
         {/* 博客标签 */}
         <div className="blog-tags-wrapper">
-          <div className="title">博客分类标签</div>
+          <LoaderFontRightIn>
+            <div className="title">博客分类标签</div>
+          </LoaderFontRightIn>
           <div className="tag-box">
             {tagsTotal.map((tag, index) => (
-              <ButtonTag key={index} value={tag} activityTags={tagList} />
+              <LoaderFontRightIn
+                key={index}
+                transitionDelay={index * 0.1}
+                className="button-tag-right-in"
+              >
+                <ButtonTag value={tag} activityTags={tagList} />
+              </LoaderFontRightIn>
             ))}
           </div>
         </div>

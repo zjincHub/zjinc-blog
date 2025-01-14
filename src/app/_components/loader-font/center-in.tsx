@@ -2,7 +2,11 @@
 
 import { useEffect, useState } from 'react';
 
-export default function Index({ children }: { children: React.ReactNode }) {
+export default function Index({
+  children,
+  transitionTime = 0.6,
+  className,
+}: Props) {
   const [fontsLoaded, setFontsLoaded] = useState(false);
 
   useEffect(() => {
@@ -13,12 +17,19 @@ export default function Index({ children }: { children: React.ReactNode }) {
 
   return (
     <div
+      className={className}
       style={{
         opacity: fontsLoaded ? 1 : 0,
-        transition: 'opacity 0.3s ease',
+        transition: `opacity ${transitionTime}s ease-in`,
       }}
     >
       {children}
     </div>
   );
+}
+
+interface Props {
+  children: React.ReactNode;
+  transitionTime?: number;
+  className?: string;
 }

@@ -1,6 +1,4 @@
 import Image from 'next/image';
-import classNames from 'classnames';
-import { pixel } from '@/utils/fonts';
 import './index.scss';
 
 export default function Index(props: IProps) {
@@ -8,7 +6,7 @@ export default function Index(props: IProps) {
     <div className="blog-header">
       <div className="content-wrapper">
         <div className="content-box">
-          <div className={classNames('left', pixel.className)}>
+          <div className="left">
             <h1>{props.title}</h1>
             <h3>
               创建于<strong>{props.createDate}</strong>， 更新于

@@ -19,7 +19,7 @@
   .content-wrapper {
     position: absolute;
     width: 100%;
-    top: 5rem;
+    top: 7rem;
     padding: 0 var(--margin-x-page);
     display: flex;
     justify-content: center;
@@ -43,7 +43,7 @@
         h1 {
           font-size: 4rem;
           color: var(--color-home-title);
-          text-shadow: 1px 2px var(--color-home-title-shadow);
+          text-shadow: 1px 1px var(--color-home-title-shadow);
         }
       }
 

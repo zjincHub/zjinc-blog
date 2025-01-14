@@ -1,9 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import FontLoader from './_components/font-loader';
 import './_styles/globals.scss';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'ZJINC 博客',
@@ -35,9 +31,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       </head>
-      <body className={inter.className}>
-        <FontLoader>{children}</FontLoader>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
