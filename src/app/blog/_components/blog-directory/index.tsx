@@ -1,4 +1,5 @@
 import { MDXContent } from 'mdx/types';
+import LoaderRightIn from '@/app/_components/loader/right-in';
 import BlogDirectoryItem from '../blog-directory-item';
 import H1 from '/_mdx-components/h1';
 import './index.scss';
@@ -18,9 +19,13 @@ export default function Index(props: IProps) {
 
   return (
     <div className="blog-directory">
-      <p>博客目录</p>
+      <LoaderRightIn>
+        <p>博客目录</p>
+      </LoaderRightIn>
       {h1List.map((item, index) => (
-        <BlogDirectoryItem key={index} value={item} />
+        <LoaderRightIn key={index} transitionDelay={index * 0.1}>
+          <BlogDirectoryItem key={index} value={item} />
+        </LoaderRightIn>
       ))}
     </div>
   );

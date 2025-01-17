@@ -7,7 +7,7 @@ export default function Index({
   src,
   height,
   width,
-  transitionTime = 0.3,
+  transitionTime = 1,
   className,
 }: Props) {
   const [imageLoaded, setImageLoaded] = useState(false);

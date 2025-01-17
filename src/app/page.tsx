@@ -5,7 +5,7 @@ import BlogCover from './_components/blog-cover';
 import ButtonTag from './_components/button-tag';
 import ButtonTheme from './_components/button-theme';
 import LoaderRightIn from './_components/loader/right-in';
-import LoaderLeftIn from './_components/loader/left-in';
+import LoaderTopLeftIn from './_components/loader/top-left-in';
 import LoaderCenterIn from './_components/loader/center-in';
 import { chineseDateToDate } from '@/utils/time';
 import './page.scss';
@@ -35,9 +35,9 @@ export default function Index(props: { searchParams: { tags: string } }) {
       {/* 顶部天空 */}
       <Header />
       {/* 顶部太阳/月亮 */}
-      <LoaderLeftIn transitionTime={1} className="setting-theme">
+      <LoaderTopLeftIn transitionTime={1} className="setting-theme">
         <ButtonTheme />
-      </LoaderLeftIn>
+      </LoaderTopLeftIn>
       {/* 首页内容 */}
       <div className="page-content">
         {/* 博客列表 */}

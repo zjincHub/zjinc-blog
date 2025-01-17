@@ -4,9 +4,13 @@
   // 背景色-内部-light
   --color-bg-content-light: #ffffff;
   // 背景色-外部-dark
-  --color-bg-outside-dark: #0d0f12;
+  --color-bg-outside-dark: #265973;
   // 背景色-内部-dark
   --color-bg-content-dark: #0d0f12;
+  // 文字色-标题
+  --color-title: #0798ff;
+  // 文字色-标题-shadow
+  --color-shadow-title: #000000;
 
   position: relative;
   height: 26rem;
@@ -42,8 +46,8 @@
 
         h1 {
           font-size: 4rem;
-          color: var(--color-home-title);
-          text-shadow: 1px 1px var(--color-home-title-shadow);
+          color: var(--color-title);
+          text-shadow: 1px 1px var(--color-shadow-title);
         }
       }
 
@@ -89,6 +93,11 @@
 
 [data-theme='dark'] {
   .header {
+    // 文字色-标题
+    --color-title: #bdd8f1;
+    // 文字色-标题-shadow
+    --color-shadow-title: #3667a6;
+
     .content-wrapper .content-box {
       .right img {
         filter: brightness(50%) contrast(1.5);

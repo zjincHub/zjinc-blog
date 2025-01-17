@@ -7,11 +7,9 @@ export default function Index() {
     <div className="header">
       <div className="content-wrapper">
         <div className="content-box">
-          <div className="left">
-            <LoaderCenterIn>
-              <h1>探索、思考、分享</h1>
-            </LoaderCenterIn>
-          </div>
+          <LoaderCenterIn className="left">
+            <h1>探索、思考、分享</h1>
+          </LoaderCenterIn>
           <div className="right">
             <LoaderImageCenterIn
               src="/images/cat.png"

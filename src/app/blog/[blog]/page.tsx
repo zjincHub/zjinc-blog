@@ -4,6 +4,8 @@ import BlogHeader from '@/app/blog/_components/blog-header';
 import BlogDirectory from '@/app/blog/_components/blog-directory';
 import Footer from '@/app/_components/footer';
 import ButtonTheme from '@/app/_components/button-theme';
+import LoaderCenterIn from '@/app/_components/loader/center-in';
+import LoaderTopLeftIn from '@/app/_components/loader/top-left-in';
 import './page.scss';
 
 /**
@@ -21,12 +23,14 @@ export default function Index(props: IProps) {
       {/* 顶部天空 */}
       <BlogHeader {...abstract} />
       {/* 顶部太阳/月亮 */}
-      <ButtonTheme className="setting-theme" />
+      <LoaderTopLeftIn transitionTime={1} className="setting-theme">
+        <ButtonTheme />
+      </LoaderTopLeftIn>
       <div className="blog-content">
-        <div className="left">
+        <LoaderCenterIn className="left">
           {/* 正文 */}
           <BlogComponent />
-        </div>
+        </LoaderCenterIn>
         <div className="right">
           {/* 目录 */}
           <BlogDirectory mdxContent={BlogComponent} />
