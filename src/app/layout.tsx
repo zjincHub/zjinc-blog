@@ -15,10 +15,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* 百度搜索引擎验证 */}
-        <meta name="baidu-site-verification" content="codeva-3LBBli8xhz" />
-        {/* Google 搜索引擎验证 */}
-        <meta name="google-site-verification" content="gmO3PEKAYe1JNJHQIzO2TE4T_2wnz-1NrMjrOHHKvzk" />
         {/* 网站图标 */}
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
