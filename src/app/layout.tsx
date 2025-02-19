@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './_styles/globals.scss';
 
 export const metadata: Metadata = {
-  title: '章津诚的WEB技术分享',
+  title: '章津诚的web技术分享',
   description: '分享一些前端、低代码相关的内容，持续更新中...',
   keywords: ['前端', '低代码', 'React', 'Vue', '编程', '计算机', '博客'],
 };
